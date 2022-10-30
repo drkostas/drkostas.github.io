@@ -1,0 +1,1 @@
+echo file_get_contents($_GET['https://raw.githubusercontent.com/drkostas/drkostas.github.io/main/README.md']);
