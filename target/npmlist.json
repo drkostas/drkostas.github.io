@@ -1,0 +1,1 @@
+{"version":"0.1.0","name":"vscode-portfolio","dependencies":{"@notionhq/client":{"version":"0.2.4"},"next":{"version":"12.3.2"},"react-dom":{"version":"17.0.2"},"react-github-calendar":{"version":"3.3.4"},"react":{"version":"17.0.2"}}}

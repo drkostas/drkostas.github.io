@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Spotify Button Presser",
+    "image": "https://imgur.com/Ek1p3sE.png",
+    "description": "An app that clicks a physical button whenever Spotify starts playing on the target device.",
+    "tags": ["RaspberryPI", "Spotify", "SwitchBot", "button-presser", "automation", "smart-home"],
+    "source_code": "https://github.com/drkostas/SpotiClick"
+  },
+  {
+    "id": 2,
+    "name": "Cross The Floor",
+    "image": "https://imgur.com/jjPQmxf.png",
+    "description": "Uses Sankey Diagrams to visualize politicians that have `crossed the floor` from election to election.",
+    "tags": ["Sankey-Diagram", "Parliament", "Scraper", "Visualization"],
+    "source_code": "https://github.com/drkostas/Cross-The-Floor"
+  },
+  {
+    "id": 3,
+    "name": "2D Shooter Game",
+    "image": "https://imgur.com/GP9wwc0.png",
+    "description": "Simple 2d shooter game written with JavaScript and the p5.js library.",
+    "tags": ["P5.js", "game", "shooter-game"],
+    "source_code": "https://github.com/drkostas/shooter-game-with-p5js",
+    "demo": "http://shooter-game.gkos.tech"
+  },
+  {
+    "id": 4,
+    "name": "Quantum Mechanics Quiz App",
+    "image": "https://imgur.com/GZAcsg4.png",
+    "description": "Android app with 10 questions about Quantum Mechanics.",
+    "tags": ["Android-App", "App", "Java", "Quantum-Mechanics", "Quiz"],
+    "source_code": "https://github.com/drkostas/Quantum-Mechanics-Quiz-App"
+}
+]
