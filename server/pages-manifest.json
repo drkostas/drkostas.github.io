@@ -1,17 +1,17 @@
 {
   "/_app": "pages/_app.js",
-  "/api/misc-projects": "pages/api/misc-projects.js",
   "/_error": "pages/_error.js",
   "/api/bots-projects": "pages/api/bots-projects.js",
   "/api/contact": "pages/api/contact.js",
   "/api/ml-projects": "pages/api/ml-projects.js",
-  "/api/pypi-projects": "pages/api/pypi-projects.js",
+  "/api/misc-projects": "pages/api/misc-projects.js",
   "/about": "pages/about.js",
+  "/github": "pages/github.js",
   "/": "pages/index.js",
   "/contact": "pages/contact.js",
-  "/settings": "pages/settings.js",
   "/projects": "pages/projects.js",
-  "/github": "pages/github.js",
+  "/api/pypi-projects": "pages/api/pypi-projects.js",
+  "/settings": "pages/settings.js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
