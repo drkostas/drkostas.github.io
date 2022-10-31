@@ -18,9 +18,9 @@ export default function HomePage() {
             <Link href="/about">
               <button className={styles.button}>About Me</button>
             </Link>
-            <Link href="/projects">
+            {/* <Link href="/projects">
               <button className={styles.button}>View Projects</button>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <button className={styles.outlined}>Contact</button>
             </Link>

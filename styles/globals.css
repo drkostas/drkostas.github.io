@@ -398,3 +398,33 @@ Transformers:hover {
   width: 80% !important;
   height: 100% !important;
 }
+
+ul, li {
+  margin:0;
+  padding:0;
+ list-style:none      
+}
+
+li {
+  padding-left:20px; 
+}
+
+li:nth-child(1):before {
+  content: "* " 
+}
+
+li:nth-child(2):before {
+  content: "* " 
+}
+
+li:nth-child(3):before {
+  content: "* " 
+}
+
+li:nth-child(4):before {
+  content: "* " 
+}
+
+li:nth-child(5):before {
+  content: "* " 
+}
