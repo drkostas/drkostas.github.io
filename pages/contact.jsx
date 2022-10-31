@@ -8,23 +8,23 @@ const ContactPage = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const submitForm = async (e) => {
-    e.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_API_URL);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
-      method: 'POST',
-      body: JSON.stringify({ name, email, subject, message }),
-    });
-    if (res.ok) {
-      alert('Your response has been received!');
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-    } else {
-      alert('There was an error. Please try again in a while.');
-    }
-  };
+  // const submitForm = async (e) => {
+  //   e.preventDefault();
+  //   console.log(process.env.NEXT_PUBLIC_API_URL);
+  //   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`, {
+  //     method: 'POST',
+  //     body: JSON.stringify({ name, email, subject, message }),
+  //   });
+  //   if (res.ok) {
+  //     alert('Your response has been received!');
+  //     setName('');
+  //     setEmail('');
+  //     setSubject('');
+  //     setMessage('');
+  //   } else {
+  //     alert('There was an error. Please try again in a while.');
+  //   }
+  // };
 
   return (
     <div className={styles.container}>
@@ -32,7 +32,7 @@ const ContactPage = () => {
         <h3 className={styles.heading}>Find Me On</h3>
         <ContactCode />
       </div>
-      <div>
+      {/* <div>
         <h3 className={styles.heading}>Or Fill Out This Form</h3>
         <form className={styles.form} onSubmit={submitForm}>
           <div className={styles.flex}>
@@ -83,7 +83,7 @@ const ContactPage = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };

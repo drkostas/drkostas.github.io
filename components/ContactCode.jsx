@@ -13,22 +13,22 @@ const contactItems = [
   },
   {
     social: 'github',
-    link: 'drkostas',
+    link: 'github.com/drkostas',
     href: 'https://github.com/drkostas',
   },
   {
     social: 'linkedin',
-    link: 'Kostanstantinos',
+    link: 'linkedin.com/in/konstantinos-georgiou',
     href: 'https://www.linkedin.com/in/konstantinos-georgiou/',
   },
   {
     social: 'PyPi',
-    link: 'drkostas',
+    link: 'pypi.org/user/drkostas',
     href: 'https://pypi.org/user/drkostas/',
   },
   {
     social: 'Google Scholar',
-    link: 'Konstantinos',
+    link: 'scholar.google.com/citations?user=b___QQ8AAAA',
     href: 'https://scholar.google.com/citations?user=b___QQ8AAAAJ&hl=en&authuser=1&oi=sra',
   },
 ];
