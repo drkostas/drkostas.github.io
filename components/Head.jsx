@@ -18,7 +18,7 @@ const CustomHead = ({ title }) => {
         content="Kostas Georgiou's Profolio."
       />
       <meta property="og:image" content="https://imgur.com/YTNNknY.png" />
-      <meta property="og:url" content="https://drkostas.github.io" />
+      <meta property="og:url" content="https://gkos.tech" />
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );

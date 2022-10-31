@@ -3,8 +3,8 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'drkostas.github.io',
-    href: 'https://drkostas.github.io',
+    link: 'gkos.tech',
+    href: 'https://gkos.tech',
   },
   {
     social: 'email',
