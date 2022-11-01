@@ -399,6 +399,7 @@ Transformers:hover {
   height: 100% !important;
 }
 
+/* Lists */
 ul, li {
   margin:0;
   padding:0;
@@ -427,4 +428,13 @@ li:nth-child(4):before {
 
 li:nth-child(5):before {
   content: "* " 
+}
+
+/* Links colors */
+a {
+  color: var(--accent-color);
+}
+
+a:visited {
+  color: var(--accent-color);
 }
