@@ -247,9 +247,15 @@
 .cardContainer {
   margin: 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 0.9fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 0.7fr));
   gap: 1.5rem;
   bottom: 0;
+}
+
+@media only screen and (max-width: 1080px) {
+    .cardContainer {
+        display: none;
+    }
 }
 
 .content {
@@ -265,7 +271,7 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0.5rem;
 }
 
 .tags span {
