@@ -15,24 +15,26 @@ const GithubPage = ({ repos, user }) => {
 
   return (
     <>
-      <div className={styles.user}>
-        <div>
-          <Image
-            src={user.avatar_url}
-            className={styles.avatar}
-            alt={user.login}
-            width={50}
-            height={50}
-          />
-          <h3 className={styles.username}>{user.login}</h3>
+      <a href="https://github.com/drkostas" target="_blank" rel="noopener" className={styles.no_color}>
+        <div className={styles.user}>
+          <div>
+            <Image
+              src={user.avatar_url}
+              className={styles.avatar}
+              alt={user.login}
+              width={50}
+              height={50}
+            />
+            <h3 className={styles.username}>{user.login}</h3>
+          </div>
+          <div>
+            <h3>{user.public_repos} repos</h3>
+          </div>
+          <div>
+            <h3>{user.followers} followers</h3>
+          </div>
         </div>
-        <div>
-          <h3>{user.public_repos} repos</h3>
-        </div>
-        <div>
-          <h3>{user.followers} followers</h3>
-        </div>
-      </div>
+      </a>
       <div> <center><h3>My Most Popular Repositories on Github</h3></center></div>
       <div className={styles.container}>
         {repos.map((repo) => (
@@ -40,16 +42,16 @@ const GithubPage = ({ repos, user }) => {
         ))}
       </div>
       <div><center><h3>My Github Calendar</h3></center></div>
-      <br/>
+      <br />
       <center>
-      <div className={styles.contributions}>
-        <GitHubCalendar
-          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
-          theme={theme}
-          hideColorLegend
+        <div className={styles.contributions}>
+          <GitHubCalendar
+            username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
+            theme={theme}
+            hideColorLegend
           // hideMonthLabels
-        />
-      </div>
+          />
+        </div>
       </center>
     </>
   );
@@ -83,9 +85,9 @@ export async function getStaticProps() {
       if (b.html_url.includes('EESTech') || b.html_url.includes('COSC')) {
         return a
       }
-      
-      return (b.stargazers_count+b.watchers_count+b.forks_count) - (a.stargazers_count+a.watchers_count+a.forks_count)
-    })  
+
+      return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count)
+    })
     .slice(0, 8);
 
   return {

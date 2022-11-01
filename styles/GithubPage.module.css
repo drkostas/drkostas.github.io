@@ -56,3 +56,12 @@
     display: none;
   }
 }
+
+a.no_color {
+  color: var(--text-color)!important;
+  text-decoration: none;
+}
+a.no_color:visited {
+  color: var(--text-color)!important;
+  text-decoration: none;
+}
