@@ -2,24 +2,24 @@ import styles from '../styles/ContactCode.module.css';
 
 const contactItems = [
   {
-    social: 'website',
-    link: 'gkos.tech',
-    href: 'https://gkos.tech',
-  },
-  {
-    social: 'email',
+    social: 'Email',
     link: 'georgiou.kostas94@gmail.com',
     href: 'mailto:georgiou.kostas94@gmail.com',
   },
   {
-    social: 'github',
+    social: 'LinkedIn',
+    link: 'linkedin.com/in/konstantinos-georgiou',
+    href: 'https://www.linkedin.com/in/konstantinos-georgiou/',
+  },
+  {
+    social: 'GitHub',
     link: 'github.com/drkostas',
     href: 'https://github.com/drkostas',
   },
   {
-    social: 'linkedin',
-    link: 'linkedin.com/in/konstantinos-georgiou',
-    href: 'https://www.linkedin.com/in/konstantinos-georgiou/',
+    social: 'Google Scholar',
+    link: 'scholar.google.com/citations?user=b___QQ8AAAA',
+    href: 'https://scholar.google.com/citations?user=b___QQ8AAAAJ&hl=en&authuser=1&oi=sra',
   },
   {
     social: 'PyPi',
@@ -27,9 +27,9 @@ const contactItems = [
     href: 'https://pypi.org/user/drkostas/',
   },
   {
-    social: 'Google Scholar',
-    link: 'scholar.google.com/citations?user=b___QQ8AAAA',
-    href: 'https://scholar.google.com/citations?user=b___QQ8AAAAJ&hl=en&authuser=1&oi=sra',
+    social: 'Website',
+    link: 'gkos.tech',
+    href: 'https://gkos.tech',
   },
 ];
 
