@@ -12,6 +12,7 @@
   --explorer-border: #161a1d;
   --tabs-bg: #191a21;
   --tab-bg: #21222c;
+  --transparent-bg: rgba(33,34,44, 0.2);
   --tab-active-bg: #282a36;
   --tab-border: #191a21;
   --bottombar-bg: #191a21;
@@ -37,6 +38,7 @@
   --explorer-hover-bg: #24292e;
   --explorer-border: #161a1d;
   --tabs-bg: #1f2428;
+  --transparent-bg: rgba(31, 36, 40, 0.2);
   --tab-bg: #1f2428;
   --tab-active-bg: #24292e;
   --tab-border: #24292e;
@@ -64,6 +66,7 @@
   --explorer-border: transparent;
   --tabs-bg: #0a0e14;
   --tab-bg: #0a0e14;
+  --transparent-bg: rgba(10, 14, 20, 0.2);
   --tab-active-bg: #0a0e14;
   --tab-border: transparent;
   --bottombar-bg: #0a0e14;
@@ -90,6 +93,7 @@
   --explorer-border: transparent;
   --tabs-bg: #1f2430;
   --tab-bg: #1f2430;
+  --transparent-bg: rgba(31, 36, 48, 0.2);
   --tab-active-bg: #1f2430;
   --tab-border: transparent;
   --bottombar-bg: #1f2430;
@@ -116,6 +120,7 @@
   --explorer-border: rgba(136, 192, 208, 0.2);
   --tabs-bg: #2e3440;
   --tab-bg: #2e3440;
+  --transparent-bg: rgba(46, 52, 64, 0.2);
   --tab-active-bg: #3b4252;
   --tab-border: transparent;
   --bottombar-bg: #3b4252;
@@ -142,6 +147,7 @@
   --explorer-border: transparent;
   --tabs-bg: #011627;
   --tab-bg: #01111d;
+  --transparent-bg: rgba(1, 17, 29, 0.2);
   --tab-active-bg: #0b2942;
   --tab-border: rgb(39, 43, 59);
   --bottombar-bg: #011627;

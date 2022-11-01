@@ -15,6 +15,48 @@ export default function HomePage() {
           <div className={styles.content}>
             <h1 className={styles.name}>Kostas Georgiou</h1>
             <h6 className={styles.bio}>Computer Vision Researcher</h6>
+            <div className={styles.cardContainer}>
+              <div className={styles.card}>
+                <div className={styles.content}>
+                  <h4>Skill Set</h4>
+                  <div className={styles.tags}>
+                    <span key='Research' className='Research'>
+                      Research
+                    </span>
+                    <span key='PyTorch' className='PyTorch'>
+                      PyTorch
+                    </span>
+                    <span key='Tensorflow' className='Tensorflow'>
+                      Tensorflow
+                    </span>
+                    <span key='Apache-Spark' className='Apache-Spark'>
+                      Apache-Spark
+                    </span>
+                    <span key='SQL' className='SQL'>
+                      SQL
+                    </span>
+                    <span key='Computer-Vision' className='Computer-Vision'>
+                      Computer-Vision
+                    </span>
+                    <span key='Data-Pipelines' className='Data-Pipelines'>
+                      Data-Pipelines
+                    </span>
+                    <span key='MLOps' className='MLOps'>
+                      MLOps
+                    </span>
+                    <span key='Software-Design' className='Software-Design'>
+                      Software-Design
+                    </span>
+                    <span key='Bots' className='Bots'>
+                      Bots
+                    </span>
+                    <span key='APIs' className='APIs'>
+                      APIs
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
             <Link href="/about">
               <button className={styles.button}>About Me</button>
             </Link>
@@ -36,6 +78,7 @@ export default function HomePage() {
                 alt="Kostas' Picture"
               />
             </div>
+
           </div>
         </div>
       </div>

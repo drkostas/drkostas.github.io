@@ -37,7 +37,7 @@
   color: #eee;
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -228,4 +228,50 @@
   border-radius: 250px;
   display: hidden;
   object-fit: cover;
+}
+
+.card {
+  background: var(--transparent-bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-right: 0%;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardContainer {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 0.9fr));
+  gap: 1.5rem;
+  bottom: 0;
+}
+
+.content {
+  padding: 1rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.content p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.tags span {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: all 0.2s;
 }
