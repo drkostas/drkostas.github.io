@@ -19,3 +19,15 @@
   background: var(--tab-active-bg);
   border-bottom: none;
 }
+
+@media screen and (max-width: 900px) {  
+  .tab {
+    font-size: 1.0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tab {
+    font-size: 1.1rem;
+  }
+}
