@@ -5,7 +5,7 @@
     "image": "https://imgur.com/NtIvxWG.png",
     "description": "Semantic Segmentation with Transformers on 3D Medical Images.",
     "tags": ["PyTorch", "OpenCV", "SegFormer", "Semantic-Segmentation", "Medical-Imaging"],
-    "source_code": "https://github.com/drkostas/3D-Semantic-Semgnetation"
+    "source_code": "https://github.com/drkostas/3D-Semantic-Segmentation"
   },
   {
     "id": 2,
