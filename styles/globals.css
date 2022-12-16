@@ -33,6 +33,18 @@
 .Semantic-Segmentation:hover {
   background: rgba(234, 69, 184, 0.25);
 }
+.Minecraft {
+  border: 0.1rem solid rgb(243, 164, 7);
+}
+.Minecraft:hover {
+  background: rgba(243, 164, 7, 0.25);
+}
+.Reinfocement-Learning {
+  border: 0.1rem solid rgb(124, 182, 237);
+}
+.Reinfocement-Learning:hover {
+  background: rgba(124, 182, 237, 0.25);
+}
 .Medical-Imaging {
   border: 0.1rem solid rgb(72, 86, 197);
 }

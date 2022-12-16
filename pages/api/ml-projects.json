@@ -1,6 +1,14 @@
 [
   {
     "id": 1,
+    "name": "Minecraft AI",
+    "image": "https://imgur.com/a/sqt0voF",
+    "description": "A Reinforcement Learning agent that learns how to to solve maze missions in Minecraft.",
+    "tags": ["PyTorch", "Reinforcement-Learning", "Minecraft"],
+    "source_code": "https://github.com/drkostas/Minecraft-AI"
+  },
+  {
+    "id": 1,
     "name": "3D Semantic Segmentation",
     "image": "https://imgur.com/NtIvxWG.png",
     "description": "Semantic Segmentation with Transformers on 3D Medical Images.",
