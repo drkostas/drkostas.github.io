@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Minecraft AI",
-    "image": "https://imgur.com/a/sqt0voF.png",
+    "image": "https://imgur.com/sqt0voF.png",
     "description": "A Reinforcement Learning agent that learns how to to solve maze missions in Minecraft.",
     "tags": ["PyTorch", "Reinforcement-Learning", "Minecraft"],
     "source_code": "https://github.com/drkostas/Minecraft-AI"
