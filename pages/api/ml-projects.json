@@ -8,7 +8,7 @@
     "source_code": "https://github.com/drkostas/Minecraft-AI"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "3D Semantic Segmentation",
     "image": "https://imgur.com/NtIvxWG.png",
     "description": "Semantic Segmentation with Transformers on 3D Medical Images.",
@@ -16,7 +16,7 @@
     "source_code": "https://github.com/drkostas/3D-Semantic-Segmentation"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Transformer-based Question Answering using BERT",
     "image": "https://imgur.com/dw21deK.png",
     "description": "BERT-based question answering/reading comprehension methods on Rinehart Novels.",
@@ -24,7 +24,7 @@
     "source_code": "https://github.com/drkostas/Bert-Question-Answering"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Accident Severity Prediction",
     "image": "https://imgur.com/3w7SKLt.png",
     "description": "Predicting the severity of car accidents from various attributes.",
@@ -33,7 +33,7 @@
     "source_code": "https://github.com/drkostas/accident-severity-prediction"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Hybrid Girvan Newman",
     "image": "https://imgur.com/FcIlWzb.png",
     "description": "Hybrid Girvan Newman. Code for the `A Distributed Hybrid Community Detection Methodology for Social Networks` paper.",
@@ -42,7 +42,7 @@
     "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=b___QQ8AAAAJ&authuser=1&citation_for_view=b___QQ8AAAAJ:u5HHmVD_uO8C"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "COVID-19 Vaccination Prediction",
     "image": "https://imgur.com/uXxzBBC.png",
     "description": "Simultaneous Time Series Forecasting on the global COVID-19 Daily Vaccinations.",
@@ -50,7 +50,7 @@
     "source_code": "https://github.com/drkostas/covid19-vaccinations-predict"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Instagram Likes Prediction",
     "image": "https://imgur.com/siwQMhc.png",
     "description": "First attempt on predicting the likes a photo will get on Instagram.",
@@ -58,7 +58,7 @@
     "source_code": "https://github.com/drkostas/Insta-Likes-Predict"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Reinforcement Learning - Value Iteration",
     "image": "https://imgur.com/v0s5gPx.png",
     "description": "Implementation of value iteration algorithm for calculating an optimal MDP policy.",
@@ -66,7 +66,7 @@
     "source_code": "https://github.com/drkostas/RL-Value-Iteration"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Vanilla Numpy CNN",
     "image": "https://imgur.com/sNrVbbL.png",
     "description": "A Vanilla Numpy-only Convolutional Neural Network.",
@@ -74,7 +74,7 @@
     "source_code": "https://github.com/drkostas/Numpy-CNN"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Vanilla Numpy Neural Network",
     "image": "https://imgur.com/mm29qlX.png",
     "description": "A Vanilla Numpy-only Feed-Forward Neural Network.",
