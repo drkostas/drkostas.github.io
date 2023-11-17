@@ -1,4 +1,4 @@
-import { pdfjs, Document, Page, PDFDownloadLink } from 'react-pdf'
+import { pdfjs, Document, Page } from 'react-pdf'
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 const myResume = './Resume.pdf';
 
@@ -17,8 +17,8 @@ const AboutPage = () => {
         <h3>Resume (<a href={myResume} download="Resume-KonstantinosGeorgiou.pdf">Download</a>)</h3>
         <br />
         <Document file={myResume}>
-          <Page pageIndex={0} />
-          <Page pageIndex={1} />
+          <Page pageIndex={0} renderMode="svg"/>
+          <Page pageIndex={1} renderMode="svg"/>
         </Document>
       </center>
     </>
