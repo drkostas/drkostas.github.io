@@ -1,6 +1,14 @@
 [
   {
     "id": 1,
+    "name": "TuneCraft",
+    "image": "https://imgur.com/9vekJOP.png",
+    "description": "Effortlessly create personalized Spotify playlists with fresh, undiscovered tracks tailored to your taste, by checking all your liked songs and existing playlists to provide you with truly new music.",
+    "tags": ["Spotify", "automation"],
+    "source_code": "https://github.com/drkostas/TuneCraft"
+  },
+  {
+    "id": 2,
     "name": "Spotify Button Presser",
     "image": "https://imgur.com/Ek1p3sE.png",
     "description": "An app that clicks a physical button whenever Spotify starts playing on the target device.",
@@ -8,7 +16,7 @@
     "source_code": "https://github.com/drkostas/SpotiClick"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Cross The Floor",
     "image": "https://imgur.com/jjPQmxf.png",
     "description": "Uses Sankey Diagrams to visualize politicians that have `crossed the floor` from election to election.",
@@ -16,7 +24,7 @@
     "source_code": "https://github.com/drkostas/Cross-The-Floor"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "2D Shooter Game",
     "image": "https://imgur.com/GP9wwc0.png",
     "description": "Simple 2d shooter game written with JavaScript and the p5.js library.",
