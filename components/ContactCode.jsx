@@ -28,8 +28,8 @@ const contactItems = [
   },
   {
     social: 'Website',
-    link: 'gkos.tech',
-    href: 'https://gkos.tech',
+    link: 'gkos.dev',
+    href: 'https://gkos.dev',
   },
 ];
 
