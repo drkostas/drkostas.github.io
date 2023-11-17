@@ -8,8 +8,8 @@ const contactItems = [
   },
   {
     social: 'LinkedIn',
-    link: 'linkedin.com/in/konstantinos-georgiou',
-    href: 'https://www.linkedin.com/in/konstantinos-georgiou/',
+    link: 'linkedin.com/in/gkos',
+    href: 'https://www.linkedin.com/in/gkos/',
   },
   {
     social: 'GitHub',
@@ -18,7 +18,7 @@ const contactItems = [
   },
   {
     social: 'Google Scholar',
-    link: 'scholar.google.com/citations?user=b___QQ8AAAA',
+    link: 'scholar.google.com/<gkos>',
     href: 'https://scholar.google.com/citations?user=b___QQ8AAAAJ&hl=en&authuser=1&oi=sra',
   },
   {

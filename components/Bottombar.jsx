@@ -1,8 +1,6 @@
 import ErrorIcon from './icons/ErrorIcon';
 import WarningIcon from './icons/WarningIcon';
 import BellIcon from './icons/BellIcon';
-import CheckIcon from './icons/CheckIcon';
-import NextjsIcon from './icons/NextjsIcon';
 import GithubIcon from './icons/GithubIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import ScholarIcon from './icons/ScholarIcon';
@@ -30,7 +28,7 @@ const Bottombar = () => {
         </div>
       </div>
       <div className={styles.container}>
-        <a href="https://www.linkedin.com/in/konstantinos-georgiou/" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/gkos/" target="_blank" rel="noopener">
           <div className={styles.section}>
             <LinkedinIcon className={styles.icon} />
             <p>Linkedin</p>
