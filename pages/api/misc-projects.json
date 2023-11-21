@@ -30,7 +30,7 @@
     "description": "Simple 2d shooter game written with JavaScript and the p5.js library.",
     "tags": ["P5.js", "game", "shooter-game"],
     "source_code": "https://github.com/drkostas/shooter-game-with-p5js",
-    "demo": "http://shooter-game.gkos.tech"
+    "demo": "http://shooter-game.gkos.dev"
   },
   {
     "id": 4,
