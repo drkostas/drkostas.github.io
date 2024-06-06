@@ -105,7 +105,7 @@ export async function getStaticProps() {
 
   return {
     props: { title: 'GitHub', repos, user },
-    revalidate: 8,
+    revalidate: 30,
   };
 }
 

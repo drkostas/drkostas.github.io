@@ -2,9 +2,16 @@ import Image from 'next/image';
 import styles from '../styles/ProjectCard.module.css';
 
 const ProjectCard = ({ project }) => {
+  const lowResImageUrl = project.image.replace(/(\.[a-z]+)$/, 'm$1');
   return (
     <div className={styles.card}>
-      <Image src={project.image} height={300} width={600} alt={project.name} />
+      <Image src={project.image}
+        height={300}
+        width={600}
+        sizes="(max-width: 600px) 100vw, 600px"
+        placeholder="blur"
+        blurDataURL={lowResImageUrl}
+        alt={project.name} />
       <div className={styles.content}>
         <h3>{project.name}</h3>
         <p>{project.description}</p>
@@ -27,34 +34,34 @@ const ProjectCard = ({ project }) => {
             </a>
           )}
           {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.underline}
-          >
-            Demo
-          </a>
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.underline}
+            >
+              Demo
+            </a>
           )}
           {project.scholar && (
-          <a
-            href={project.scholar}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.underline}
-          >
-            Paper
-          </a>
+            <a
+              href={project.scholar}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.underline}
+            >
+              Paper
+            </a>
           )}
           {project.pypi && (
-          <a
-            href={project.pypi}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.underline}
-          >
-            PyPi
-          </a>
+            <a
+              href={project.pypi}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.underline}
+            >
+              PyPi
+            </a>
           )}
         </div>
       </div>
