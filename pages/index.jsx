@@ -23,6 +23,18 @@ export default function HomePage() {
                     <span key='Research' className='Research'>
                       Research
                     </span>
+                    <span key='Computer-Vision' className='Computer-Vision'>
+                      Computer-Vision
+                    </span>
+                    <span key='MIM' className='MIM'>
+                      Masked-Image-Modeling
+                    </span>
+                    <span key='LLMs' className='LLMs'>
+                      LLMs
+                    </span>
+                    <span key='GenAI' className='GenAI'>
+                      Generative AI
+                    </span>
                     <span key='PyTorch' className='PyTorch'>
                       PyTorch
                     </span>
@@ -35,23 +47,14 @@ export default function HomePage() {
                     <span key='SQL' className='SQL'>
                       SQL
                     </span>
-                    <span key='Computer-Vision' className='Computer-Vision'>
-                      Computer-Vision
-                    </span>
-                    <span key='Data-Pipelines' className='Data-Pipelines'>
-                      Data-Pipelines
-                    </span>
                     <span key='MLOps' className='MLOps'>
                       MLOps
                     </span>
                     <span key='Software-Design' className='Software-Design'>
-                      Software-Design
+                      Software-Engineering
                     </span>
                     <span key='Bots' className='Bots'>
                       Bots
-                    </span>
-                    <span key='APIs' className='APIs'>
-                      APIs
                     </span>
                   </div>
                 </div>
@@ -74,7 +77,7 @@ export default function HomePage() {
                 className={styles.picture}
                 src="/me.jpeg"
                 width={300}
-                height={290}
+                height={300}
                 alt="Kostas' Picture"
               />
             </div>

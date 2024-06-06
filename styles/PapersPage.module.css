@@ -1,0 +1,73 @@
+/* ProjectsPage.module.css */
+.card {
+  background: var(--article-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%; /* Make the card full width */
+  margin-bottom: 0.5rem; /* Add some space between cards */
+}
+
+.card:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.content {
+  padding: 1rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.content p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 1.25rem;
+}
+
+.card h3 {
+  color: var(--accent-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 0.2rem;
+  margin: 1.5rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.underline {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.underline:hover {
+  color: var(--accent-color-hover);
+}
+
+
+.underline {
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(120deg,
+      var(--accent-color) 100%,
+      var(--accent-color) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.underline:hover {
+  background-size: 100% 88%;
+}

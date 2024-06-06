@@ -297,6 +297,14 @@
   background: rgba(43, 233, 173, 0.25);
 }
 
+.GenAI {
+  border: 0.1rem solid rgb(43, 113, 233);
+}
+
+.GenAI:hover {
+  background: rgba(43, 84, 233, 0.25);
+}
+
 .Vanilla-Implementation {
   border: 0.1rem solid rgb(0, 0, 0);
 }
@@ -399,6 +407,14 @@
 
 .AWS:hover {
   background: rgba(159, 161, 42, 0.25);
+}
+
+.LLMs {
+  border: 0.1rem solid rgb(74, 161, 42);
+}
+
+.LLMs:hover {
+  background: rgba(88, 161, 42, 0.25);
 }
 
 .RDS {
