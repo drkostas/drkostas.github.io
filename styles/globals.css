@@ -601,6 +601,14 @@
   background: rgba(232, 255, 118, 0.25);
 }
 
+.MIM {
+  border: 0.1rem solid rgb(118, 184, 255);
+}
+
+.MIM:hover {
+  background: rgba(118, 180, 255, 0.25);
+}
+
 .SQL {
   border: 0.1rem solid rgb(255, 118, 214);
 }
