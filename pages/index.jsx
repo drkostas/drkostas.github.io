@@ -60,8 +60,8 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <Link href="/about">
-              <button className={styles.button}>About Me</button>
+            <Link href="/resume">
+              <button className={styles.button}>Resume</button>
             </Link>
             {/* <Link href="/projects">
               <button className={styles.button}>View Projects</button>
