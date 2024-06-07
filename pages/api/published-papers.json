@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Cross-Scale MAE: A Tale of Multiscale Exploitation in Remote Sensing",
+    "citations": 2,
+    "year": 2024,
+    "conference": "NeurIPS 2024",
+    "abstract": "Remote sensing images present unique challenges to image analysis due to the extensive geographic coverage, hardware limitations, and misaligned multi-scale images. This paper revisits the classical multi-scale representation learning problem but under the general framework of self-supervised learning for remote sensing image understanding. We present Cross-Scale MAE, a self-supervised model built upon the Masked Auto-Encoder (MAE). During pre-training, Cross-Scale MAE employs scale augmentation techniques and enforces cross-scale consistency constraints through both contrastive and generative losses, to ensure consistent and meaningful representations well-suited for a wide range of downstream tasks. Further, our implementation leverages the xFormers library to accelerate network pre training on a single GPU while maintaining the quality of learned representations. Experimental evaluations demonstrate that Cross-Scale MAE exhibits superior performance compared to standard MAE and other state-of-the-art remote sensing MAE methods.",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=b___QQ8AAAAJ&sortby=pubdate&authuser=1&citation_for_view=b___QQ8AAAAJ:d1gkVwhDpl0C"
+  },
+  {
+    "id": 2,
+    "title": "Ocassionally Secure: A Comparative Analysis of Code Generation Assistants",
+    "citations": 2,
+    "year": 2024,
+    "conference": "arXiv preprint",
+    "abstract": "Large Language Models (LLMs) are being increasingly utilized in various applications, with code generations being a notable example. While previous research has shown that LLMs have the capability to generate both secure and insecure code, the literature does not take into account what factors help generate secure and effective code. Therefore in this paper we focus on identifying and understanding the conditions and contexts in which LLMs can be effectively and safely deployed in real-world scenarios to generate quality code. We conducted a comparative analysis of four advanced LLMs--GPT-3.5 and GPT-4 using ChatGPT and Bard and Gemini from Google--using 9 separate tasks to assess each model's code generation capabilities. We contextualized our study to represent the typical use cases of a real-life developer employing LLMs for everyday tasks as work. Additionally, we place an emphasis on security awareness which is represented through the use of two distinct versions of our developer persona. In total, we collected 61 code outputs and analyzed them across several aspects: functionality, security, performance, complexity, and reliability. These insights are crucial for understanding the models' capabilities and limitations, guiding future development and practical applications in the field of automated code generation.",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=b___QQ8AAAAJ&sortby=pubdate&authuser=1&citation_for_view=b___QQ8AAAAJ:9yKSN-GCB0IC"
+  },
+  {
+    "id": 3,
+    "title": "Semantic segmentation in aerial imagery using multi-level contrastive learning with local consistency",
+    "citations": 15,
+    "year": 2023,
+    "conference": "IEEE WACV 2023",
+    "abstract": "Semantic segmentation in large-scale aerial images is an extremely challenging task. On one hand, the limited ground truth, as compared to the vast area the images cover, greatly hinders the development of supervised representation learning. On the other hand, the large footprint from remote sensing raises new challenges for semantic segmentation. In addition, the complex and ever changing image acquisition conditions further complicate the problem where domain shifting commonly occurs. In this paper, we exploit self-supervised contrastive learning (CL) methodologies for semantic segmentation in aerial imagery. In addition to performing CL at the feature level as most practices do, we add another level of contrastive learning, at the semantic level, taking advantage of the segmentation output from the downstream task. Further, we embed local mutual information in the semantic-level CL to enforce local consistency. This has largely enhanced the representation power at each pixel and improved the generalization capacity of the trained model. We refer to the proposed approach as multi-level contrastive learning with local consistency (mCL-LC). The experimental results on different benchmarks indicate that the proposed mCL-LC exhibits superior performance as compared to other state-of-the-art contrastive learning frameworks for the semantic segmentation task. mCL-LC also carries better generalization capacity especially when domain shifting exists.",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=b___QQ8AAAAJ&sortby=pubdate&authuser=1&citation_for_view=b___QQ8AAAAJ:u-x6o8ySG0sC"
+  },
+  {
+    "id": 4,
+    "title": "A distributed hybrid community detection methodology for social networks",
+    "citations": 2,
+    "year": 2019,
+    "conference": "Algorithms (MDPI) 2019",
+    "abstract": "Nowadays, the amount of digitally available information has tremendously grown, with real-world data graphs outreaching the millions or even billions of vertices. Hence, community detection, where groups of vertices are formed according to a well-defined similarity measure, has never been more essential affecting a vast range of scientific fields such as bio-informatics, sociology, discrete mathematics, nonlinear dynamics, digital marketing, and computer science. Even if an impressive amount of research has yet been published to tackle this NP-hard class problem, the existing methods and algorithms have virtually been proven inefficient and severely unscalable. In this regard, the purpose of this manuscript is to combine the network topology properties expressed by the loose similarity and the local edge betweenness, which is a currently proposed Girvan–Newman’s edge betweenness measure alternative, along with the intrinsic user content information, in order to introduce a novel and highly distributed hybrid community detection methodology. The proposed approach has been thoroughly tested on various real social graphs, roundly compared to other classic divisive community detection algorithms that serve as baselines and practically proven exceptionally scalable, highly efficient, and adequately accurate in terms of revealing the subjacent network hierarchy.",
+    "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=b___QQ8AAAAJ&sortby=pubdate&authuser=1&citation_for_view=b___QQ8AAAAJ:u5HHmVD_uO8C"
+  }
+]

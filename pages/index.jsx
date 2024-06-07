@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className={styles.foreground}>
           <div className={styles.content}>
             <h1 className={styles.name}>Kostas Georgiou</h1>
-            <h6 className={styles.bio}>Computer Vision Researcher</h6>
+            <h6 className={styles.bio}>AI Research Engineer</h6>
             <div className={styles.cardContainer}>
               <div className={styles.card}>
                 <div className={styles.content}>
@@ -22,6 +22,18 @@ export default function HomePage() {
                   <div className={styles.tags}>
                     <span key='Research' className='Research'>
                       Research
+                    </span>
+                    <span key='Computer-Vision' className='Computer-Vision'>
+                      Computer-Vision
+                    </span>
+                    <span key='MIM' className='MIM'>
+                      Masked-Image-Modeling
+                    </span>
+                    <span key='LLMs' className='LLMs'>
+                      LLMs
+                    </span>
+                    <span key='GenAI' className='GenAI'>
+                      Generative AI
                     </span>
                     <span key='PyTorch' className='PyTorch'>
                       PyTorch
@@ -35,30 +47,21 @@ export default function HomePage() {
                     <span key='SQL' className='SQL'>
                       SQL
                     </span>
-                    <span key='Computer-Vision' className='Computer-Vision'>
-                      Computer-Vision
-                    </span>
-                    <span key='Data-Pipelines' className='Data-Pipelines'>
-                      Data-Pipelines
-                    </span>
                     <span key='MLOps' className='MLOps'>
                       MLOps
                     </span>
                     <span key='Software-Design' className='Software-Design'>
-                      Software-Design
+                      Software-Engineering
                     </span>
                     <span key='Bots' className='Bots'>
                       Bots
-                    </span>
-                    <span key='APIs' className='APIs'>
-                      APIs
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            <Link href="/about">
-              <button className={styles.button}>About Me</button>
+            <Link href="/resume">
+              <button className={styles.button}>Resume</button>
             </Link>
             {/* <Link href="/projects">
               <button className={styles.button}>View Projects</button>
@@ -74,7 +77,7 @@ export default function HomePage() {
                 className={styles.picture}
                 src="/me.jpeg"
                 width={300}
-                height={290}
+                height={300}
                 alt="Kostas' Picture"
               />
             </div>

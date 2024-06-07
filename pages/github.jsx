@@ -58,6 +58,7 @@ const GithubPage = ({ repos, user }) => {
 };
 
 export async function getStaticProps() {
+  const timestamp = new Date().getTime();
   const userRes = await fetch(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
     {
@@ -76,23 +77,35 @@ export async function getStaticProps() {
       },
     }
   );
+  const additionalRepoRes = await fetch(
+    `https://api.github.com/repos/aicip/Cross-Scale-MAE`,
+    {
+      headers: {
+        Authorization: `token ${process.env.GITHUB_API_KEY}`,
+      },
+    }
+  );
   let repos = await repoRes.json();
+  const additionalRepo = await additionalRepoRes.json();
+
+  // Add the specified repo explicitly
+  repos.push(additionalRepo);
   repos = repos
     .sort((a, b) => {
-      if (a.html_url.includes('EESTech') || a.html_url.includes('COSC')) {
+      if (a.html_url.includes('EESTech') || a.html_url.includes('COSC') || a.html_url.includes('/drkostas/drkostas')) {
         return b
       }
-      if (b.html_url.includes('EESTech') || b.html_url.includes('COSC')) {
+      if (b.html_url.includes('EESTech') || b.html_url.includes('COSC') || b.html_url.includes('/drkostas/drkostas')) {
         return a
       }
 
       return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count)
     })
-    .slice(0, 8);
+    .slice(0, 10);
 
   return {
     props: { title: 'GitHub', repos, user },
-    revalidate: 10,
+    revalidate: 30,
   };
 }
 

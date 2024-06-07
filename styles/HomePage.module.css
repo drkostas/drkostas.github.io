@@ -3,14 +3,18 @@
 
 .picture_boader {
   border: 10px solid rgba(64, 102, 97, 0.5);
-  border-radius: 250px;
-  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  position: relative;
 }
 
 .picture {
-  border-radius: 250px;
-  display: hidden;
+  width: 70%;
+  height: 70%;
   object-fit: cover;
+  object-position: 50% 10%;
 }
 
 .container {
@@ -314,3 +318,4 @@
   font-size: 0.75rem;
   transition: all 0.2s;
 }
+

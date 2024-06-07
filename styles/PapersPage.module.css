@@ -1,19 +1,17 @@
+/* ProjectsPage.module.css */
 .card {
   background: var(--article-bg);
   display: flex;
   flex-direction: column;
   border-radius: 20px;
   cursor: pointer;
-}
-
-.card img {
-  filter: grayscale(70%);
+  width: 100%; /* Make the card full width */
+  margin-bottom: 0.5rem; /* Add some space between cards */
 }
 
 .card:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .content {
   padding: 1rem;
   border-radius: 0 0 20px 20px;
@@ -24,24 +22,35 @@
   margin-top: 0.5rem;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.5rem 0 1rem;
+.card p {
+  margin-bottom: 1.25rem;
 }
 
-.tags span {
-  margin: 0.5rem 0.5rem 0 0;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  transition: all 0.2s;
+.card h3 {
+  color: var(--accent-color);
 }
 
-.cta {
+.container {
   display: flex;
-  gap: 1rem;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 0.2rem;
+  margin: 1.5rem 0;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.underline {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.underline:hover {
+  color: var(--accent-color-hover);
+}
+
 
 .underline {
   padding: 0.2rem 0;
