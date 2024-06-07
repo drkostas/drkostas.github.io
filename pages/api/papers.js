@@ -5,6 +5,6 @@ export const getPapers = () => {
 };
 
 export default (req, res) => {
-  const papers = getPapers();
-  res.json(papers);
+  const projects = getPapers();
+  res.json(projects);
 };

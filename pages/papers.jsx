@@ -1,20 +1,7 @@
-// pages/papers.jsx
-import { useEffect, useState } from 'react';
+import { getPapers } from './api/papers';
 import styles from '../styles/PapersPage.module.css';
 
-const PapersPage = () => {
-  const [papers, setPapers] = useState([]);
-
-  useEffect(() => {
-    const fetchPapers = async () => {
-      const response = await fetch('/api/papers');
-      const data = await response.json();
-      setPapers(data);
-    };
-
-    fetchPapers();
-  }, []);
-
+const PapersPage = ({ papers }) => {
   return (
     <>
       <h3>My Publications</h3>
@@ -29,17 +16,16 @@ const PapersPage = () => {
               <p><strong>Conference:</strong> {paper.conference}</p>
               <p><strong>Year:</strong> {paper.year}</p>
               <p><strong>Citations:</strong> {paper.citations}</p>
-              <p>
               <div className={styles.cta}>
-                <a href={paper.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.underline}
+                <a
+                  href={paper.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.underline}
                 >
                   Read Paper
                 </a>
               </div>
-              </p>
             </div>
           </div>
         ))}
@@ -47,5 +33,13 @@ const PapersPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const papers = getPapers();
+
+  return {
+    props: { title: 'Papers', papers },
+  };
+}
 
 export default PapersPage;
