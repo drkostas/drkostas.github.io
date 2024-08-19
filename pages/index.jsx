@@ -2,6 +2,8 @@ import Link from 'next/link';
 // import Illustration from '../components/Illustration';
 import Image from "next/image";
 import styles from '../styles/HomePage.module.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function HomePage() {
   return (

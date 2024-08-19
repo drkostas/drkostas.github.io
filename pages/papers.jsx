@@ -1,5 +1,7 @@
 import { getPapers } from './api/papers';
 import styles from '../styles/PapersPage.module.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const PapersPage = ({ papers }) => {
   return (
