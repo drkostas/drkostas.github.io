@@ -1,7 +1,5 @@
 import ThemeInfo from '../components/ThemeInfo';
 import styles from '../styles/SettingsPage.module.css';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
 
 const SettingsPage = () => {
   return (

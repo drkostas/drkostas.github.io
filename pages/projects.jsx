@@ -4,8 +4,6 @@ import { getBotsProjects } from './api/bots-projects';
 import { getPyPiProjects } from './api/pypi-projects';
 import { getMiscProjects } from './api/misc-projects';
 import styles from '../styles/ProjectsPage.module.css';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
 
 const ProjectsPage = ({ ml_projects, bots_projects, pypi_projects, misc_projects }) => {
   return (
