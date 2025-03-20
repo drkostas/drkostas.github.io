@@ -297,6 +297,14 @@
   background: rgba(43, 233, 173, 0.25);
 }
 
+.Data-Engineering {
+  border: 0.1rem solid rgb(43, 233, 173);
+}
+
+.Data-Engineering:hover {
+  background: rgba(43, 233, 173, 0.25);
+}
+
 .GenAI {
   border: 0.1rem solid rgb(43, 113, 233);
 }

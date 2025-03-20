@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className={styles.foreground}>
           <div className={styles.content}>
             <h1 className={styles.name}>Kostas Georgiou</h1>
-            <h6 className={styles.bio}>AI Research Engineer</h6>
+            <h6 className={styles.bio}>Machine Learning Engineer</h6>
             <div className={styles.cardContainer}>
               <div className={styles.card}>
                 <div className={styles.content}>
@@ -26,14 +26,11 @@ export default function HomePage() {
                     <span key='Computer-Vision' className='Computer-Vision'>
                       Computer-Vision
                     </span>
-                    <span key='MIM' className='MIM'>
-                      Masked-Image-Modeling
-                    </span>
                     <span key='LLMs' className='LLMs'>
                       LLMs
                     </span>
-                    <span key='GenAI' className='GenAI'>
-                      Generative AI
+                    <span key='MIM' className='MIM'>
+                      Masked-Image-Modeling
                     </span>
                     <span key='PyTorch' className='PyTorch'>
                       PyTorch
@@ -50,8 +47,8 @@ export default function HomePage() {
                     <span key='MLOps' className='MLOps'>
                       MLOps
                     </span>
-                    <span key='Software-Design' className='Software-Design'>
-                      Software-Engineering
+                    <span key='Data-Engineering' className='Data-Engineering'>
+                     Data-Engineering
                     </span>
                     <span key='Bots' className='Bots'>
                       Bots
