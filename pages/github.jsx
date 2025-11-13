@@ -1,10 +1,15 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
 import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
-const GithubPage = ({ repos, user }) => {
-  // console.log(repos);
+const GithubPage = () => {
+  const [repos, setRepos] = useState([]);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const theme = {
     level0: '#161B22',
     level1: '#0e4429',
@@ -12,6 +17,75 @@ const GithubPage = ({ repos, user }) => {
     level3: '#26a641',
     level4: '#39d353',
   };
+
+  useEffect(() => {
+    const fetchGitHubData = async () => {
+      try {
+        setLoading(true);
+        const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+
+        // Fetch user data
+        const userRes = await fetch(`https://api.github.com/users/${username}`);
+        const userData = await userRes.json();
+        setUser(userData);
+
+        // Fetch repositories
+        const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+        const reposData = await repoRes.json();
+
+        // Fetch additional repo
+        const additionalRepoRes = await fetch(`https://api.github.com/repos/aicip/Cross-Scale-MAE`);
+        const additionalRepo = await additionalRepoRes.json();
+
+        // Combine and sort repos
+        let allRepos = [...reposData, additionalRepo];
+        allRepos = allRepos
+          .sort((a, b) => {
+            if (a.html_url.includes('EESTech') || a.html_url.includes('COSC') || a.html_url.includes('/drkostas/drkostas')) {
+              return 1;
+            }
+            if (b.html_url.includes('EESTech') || b.html_url.includes('COSC') || b.html_url.includes('/drkostas/drkostas')) {
+              return -1;
+            }
+            return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count);
+          })
+          .slice(0, 10);
+
+        setRepos(allRepos);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching GitHub data:', err);
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchGitHubData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <h3>Loading GitHub data...</h3>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <h3>Error loading GitHub data: {error}</h3>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div style={{ textAlign: 'center', padding: '2rem' }}>
+        <h3>No user data available</h3>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -49,7 +123,6 @@ const GithubPage = ({ repos, user }) => {
             username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
             theme={theme}
             hideColorLegend
-          // hideMonthLabels
           />
         </div>
       </center>
@@ -58,54 +131,8 @@ const GithubPage = ({ repos, user }) => {
 };
 
 export async function getStaticProps() {
-  const timestamp = new Date().getTime();
-  const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
-    {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
-      },
-    }
-  );
-  const user = await userRes.json();
-
-  const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
-    {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
-      },
-    }
-  );
-  const additionalRepoRes = await fetch(
-    `https://api.github.com/repos/aicip/Cross-Scale-MAE`,
-    {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
-      },
-    }
-  );
-  let repos = await repoRes.json();
-  const additionalRepo = await additionalRepoRes.json();
-
-  // Add the specified repo explicitly
-  repos.push(additionalRepo);
-  repos = repos
-    .sort((a, b) => {
-      if (a.html_url.includes('EESTech') || a.html_url.includes('COSC') || a.html_url.includes('/drkostas/drkostas')) {
-        return b
-      }
-      if (b.html_url.includes('EESTech') || b.html_url.includes('COSC') || b.html_url.includes('/drkostas/drkostas')) {
-        return a
-      }
-
-      return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count)
-    })
-    .slice(0, 10);
-
   return {
-    props: { title: 'GitHub', repos, user },
-    revalidate: 30,
+    props: { title: 'GitHub' },
   };
 }
 
