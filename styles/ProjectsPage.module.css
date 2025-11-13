@@ -1,6 +1,47 @@
+.header {
+  margin-bottom: 0.75rem;
+}
+
+.header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 1rem 0;
+  position: relative;
+}
+
+.categoryHeader::before {
+  content: "";
+  width: 3px;
+  height: 18px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.categoryHeader h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.categoryHeader::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, transparent 100%);
+  opacity: 0.4;
+}
+
 .container {
-  margin: 1.5rem 0;
+  margin: 0 0 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
 }

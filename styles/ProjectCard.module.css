@@ -2,63 +2,104 @@
   background: var(--article-bg);
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  position: relative;
+  border: 1px solid transparent;
 }
 
 .card img {
-  filter: grayscale(70%);
+  filter: grayscale(60%) brightness(0.85);
+  transition: all 0.3s ease;
+  object-fit: cover;
+  height: 140px;
+  opacity: 0.8;
 }
 
 .card:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.card:hover img {
+  filter: grayscale(20%) brightness(1);
+  opacity: 1;
 }
 
 .content {
-  padding: 1rem;
-  border-radius: 0 0 20px 20px;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.content h3 {
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
 }
 
 .content p {
   font-size: 0.8rem;
-  margin-top: 0.5rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin: 0;
+  color: var(--text-color);
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin: 0.5rem 0 1rem;
+  gap: 0.4rem;
+  margin: 0.4rem 0;
 }
 
 .tags span {
-  margin: 0.5rem 0.5rem 0 0;
   padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  transition: all 0.2s;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: var(--text-color);
+  background: var(--button-bg);
+  opacity: 0.6;
+  border: 1px solid transparent;
+}
+
+.tags span:hover {
+  opacity: 1;
+  border-color: var(--accent-color);
 }
 
 .cta {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
 }
 
 .underline {
-  padding: 0.2rem 0;
-  font-size: 0.9rem;
-  letter-spacing: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
   cursor: pointer;
-  color: white;
+  color: var(--accent-color);
   text-decoration: none;
-  background-image: linear-gradient(120deg,
-      var(--accent-color) 100%,
-      var(--accent-color) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  background: var(--button-bg);
+  border: 1px solid transparent;
+  flex: 1;
+  text-align: center;
 }
 
 .underline:hover {
-  background-size: 100% 88%;
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
