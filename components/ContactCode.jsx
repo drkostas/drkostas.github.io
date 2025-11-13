@@ -3,8 +3,8 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'Email',
-    link: 'georgiou.kostas94@gmail.com',
-    href: 'mailto:georgiou.kostas94@gmail.com',
+    link: 'gkos.mldev@gmail.com',
+    href: 'mailto:gkos.mldev@gmail.com',
   },
   {
     social: 'LinkedIn',
