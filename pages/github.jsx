@@ -5,10 +5,11 @@ import RepoCard from '../components/RepoCard';
 import styles from '../styles/GithubPage.module.css';
 
 const GithubPage = () => {
-  const [repos, setRepos] = useState([]);
+  const [allRepos, setAllRepos] = useState([]);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [reposToShow, setReposToShow] = useState(10);
 
   const theme = {
     level0: '#161B22',
@@ -33,25 +34,15 @@ const GithubPage = () => {
         const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
         const reposData = await repoRes.json();
 
-        // Fetch additional repo
+        // Fetch additional important research repo
         const additionalRepoRes = await fetch(`https://api.github.com/repos/aicip/Cross-Scale-MAE`);
         const additionalRepo = await additionalRepoRes.json();
 
-        // Combine and sort repos
-        let allRepos = [...reposData, additionalRepo];
-        allRepos = allRepos
-          .sort((a, b) => {
-            if (a.html_url.includes('EESTech') || a.html_url.includes('COSC') || a.html_url.includes('/drkostas/drkostas')) {
-              return 1;
-            }
-            if (b.html_url.includes('EESTech') || b.html_url.includes('COSC') || b.html_url.includes('/drkostas/drkostas')) {
-              return -1;
-            }
-            return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count);
-          })
-          .slice(0, 10);
+        // Combine and sort by stars
+        let repos = [...reposData, additionalRepo];
+        repos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
-        setRepos(allRepos);
+        setAllRepos(repos);
         setLoading(false);
       } catch (err) {
         console.error('Error fetching GitHub data:', err);
@@ -62,6 +53,8 @@ const GithubPage = () => {
 
     fetchGitHubData();
   }, []);
+
+  const displayedRepos = reposToShow === -1 ? allRepos : allRepos.slice(0, reposToShow);
 
   if (loading) {
     return (
@@ -109,23 +102,55 @@ const GithubPage = () => {
           </div>
         </div>
       </a>
-      <div> <center><h3>My Most Popular Repositories on Github</h3></center></div>
+
+      <div className={styles.header}>
+        <h3>Repositories</h3>
+        <div className={styles.showControls}>
+          <span className={styles.showLabel}>Show:</span>
+          <button
+            className={`${styles.showButton} ${reposToShow === 10 ? styles.active : ''}`}
+            onClick={() => setReposToShow(10)}
+          >
+            10
+          </button>
+          <button
+            className={`${styles.showButton} ${reposToShow === 25 ? styles.active : ''}`}
+            onClick={() => setReposToShow(25)}
+          >
+            25
+          </button>
+          <button
+            className={`${styles.showButton} ${reposToShow === 50 ? styles.active : ''}`}
+            onClick={() => setReposToShow(50)}
+          >
+            50
+          </button>
+          <button
+            className={`${styles.showButton} ${reposToShow === -1 ? styles.active : ''}`}
+            onClick={() => setReposToShow(-1)}
+          >
+            All
+          </button>
+        </div>
+      </div>
+      <hr/>
+
       <div className={styles.container}>
-        {repos.map((repo) => (
+        {displayedRepos.map((repo) => (
           <RepoCard key={repo.id} repo={repo} />
         ))}
       </div>
-      <div><center><h3>My Github Calendar</h3></center></div>
-      <br />
-      <center>
-        <div className={styles.contributions}>
-          <GitHubCalendar
-            username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
-            theme={theme}
-            hideColorLegend
-          />
-        </div>
-      </center>
+
+      <div className={styles.separator}></div>
+
+      <h3>Contribution Activity</h3>
+      <div className={styles.contributions}>
+        <GitHubCalendar
+          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
+          theme={theme}
+          hideColorLegend
+        />
+      </div>
     </>
   );
 };
