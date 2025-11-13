@@ -4,6 +4,7 @@ import styles from '../styles/PapersPage.module.css';
 
 const PapersPage = ({ papers }) => {
   const [sortBy, setSortBy] = useState('citations'); // default is citations
+  const [expandedPapers, setExpandedPapers] = useState(new Set());
 
   // Sort papers based on current sort type
   const sortedPapers = [...papers].sort((a, b) => {
@@ -22,8 +23,23 @@ const PapersPage = ({ papers }) => {
     }
   });
 
+  const toggleExpanded = (paperId) => {
+    const newExpanded = new Set(expandedPapers);
+    if (newExpanded.has(paperId)) {
+      newExpanded.delete(paperId);
+    } else {
+      newExpanded.add(paperId);
+    }
+    setExpandedPapers(newExpanded);
+  };
+
+  const truncateText = (text, maxLength = 200) => {
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength) + '...';
+  };
+
   return (
-    <>
+    <div className={styles.pageWrapper}>
       <div className={styles.header}>
         <h3>My Publications</h3>
         <div className={styles.sortControls}>
@@ -42,40 +58,64 @@ const PapersPage = ({ papers }) => {
           </button>
         </div>
       </div>
-      <br/>
-      <hr/>
+
       <div className={styles.container}>
-        {sortedPapers.map((paper) => (
-          <div key={paper.id} className={styles.card}>
-            <div className={styles.cardHeader}>
-              <h3>{paper.title}</h3>
-              {paper.citations > 0 && (
-                <div className={styles.citationBadge}>{paper.citations}</div>
-              )}
-            </div>
-            <p className={styles.abstract}>{paper.abstract}</p>
-            <div className={styles.metadata}>
-              <div className={styles.metadataItem}>
-                <span className={styles.metadataLabel}>Conference:</span>
-                <span className={styles.metadataValue}>{paper.conference}</span>
+        {sortedPapers.map((paper) => {
+          const isExpanded = expandedPapers.has(paper.id);
+          const isLongAbstract = paper.abstract.length > 200;
+
+          return (
+            <div key={paper.id} className={styles.card}>
+              <div className={styles.cardTop}>
+                <div className={styles.cardHeader}>
+                  <h3>{paper.title}</h3>
+                  {paper.citations > 0 && (
+                    <div className={styles.citationBadge}>{paper.citations}</div>
+                  )}
+                </div>
+
+                <div className={styles.abstract}>
+                  {isExpanded || !isLongAbstract
+                    ? paper.abstract
+                    : truncateText(paper.abstract)}
+                  {isLongAbstract && (
+                    <button
+                      className={styles.expandButton}
+                      onClick={() => toggleExpanded(paper.id)}
+                    >
+                      {isExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
               </div>
-              <div className={styles.metadataItem}>
-                <span className={styles.metadataLabel}>Year:</span>
-                <span className={styles.metadataValue}>{paper.year}</span>
+
+              <div className={styles.cardBottom}>
+                <div className={styles.metadata}>
+                  <div className={styles.metadataItem}>
+                    <span className={styles.metadataLabel}>Conference:</span>
+                    <span className={styles.metadataValue}>{paper.conference}</span>
+                  </div>
+                  <div className={styles.metadataItem}>
+                    <span className={styles.metadataLabel}>Year:</span>
+                    <span className={styles.metadataValue}>{paper.year}</span>
+                  </div>
+                </div>
+
+                <a
+                  href={paper.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.readLink}
+                  title="Read full paper"
+                >
+                  PDF →
+                </a>
               </div>
             </div>
-            <a
-              href={paper.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.underline}
-            >
-              Read Paper →
-            </a>
-          </div>
-        ))}
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 };
 
