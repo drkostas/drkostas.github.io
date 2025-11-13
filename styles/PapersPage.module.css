@@ -1,4 +1,47 @@
 /* ProjectsPage.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sortControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sortLabel {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-right: 0.25rem;
+}
+
+.sortButton {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid transparent;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.sortButton:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.sortButton.active {
+  background: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
 .card {
   background: var(--article-bg);
   display: flex;
