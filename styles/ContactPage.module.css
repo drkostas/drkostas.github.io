@@ -1,83 +1,166 @@
 .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+.content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.container > * {
-  flex: 1;
-}
-
-.container > div:first-child {
-  border-right: 1px solid var(--accent-color);
-}
-
-.container h1 {
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-}
-
-.flex {
-  display: flex;
-  gap: 1rem;
-}
-
-.form label {
-  display: block;
+.header {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1.25rem;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
 }
 
-.form input,
-.form textarea {
-  font-family: 'JetBrains Mono';
-  margin-bottom: 1.5rem;
-  background: var(--article-bg);
-  color: var(--text-color);
-  border: none;
-  font-size: 1rem;
-  padding: 0.75rem;
-  width: 100%;
-  resize: none;
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-color);
 }
 
-.form input:focus,
-.form textarea:focus {
-  outline: 1px solid var(--accent-color);
-}
-
-.form button {
-  background: var(--accent-color);
-  color: var(--main-bg);
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
+.subtitle {
   font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.85;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
-.heading {
-  margin-bottom: 1.5rem;
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  background: var(--article-bg);
+  border-radius: 6px;
+  border: 1px solid var(--explorer-border);
 }
 
-@media screen and (max-width: 1200px) {
+.bio p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--article-bg);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contactCard:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.cardIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.cardValue {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--text-color);
+  opacity: 0.85;
+  word-break: break-word;
+}
+
+.cardDescription {
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 0.65;
+  color: var(--text-color);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0 0.5rem 0;
+  border-top: 1px solid var(--explorer-border);
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 500;
+}
+
+.statusIndicator {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
   .container {
-    display: block;
+    padding: 1rem;
   }
-  .container > div:first-child {
-    border-right: none;
-    margin-bottom: 2.5rem;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  .flex {
-    display: block;
+  .contactGrid {
+    grid-template-columns: 1fr;
   }
-  .form input {
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
     font-size: 0.85rem;
   }
 }
