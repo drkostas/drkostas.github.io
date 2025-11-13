@@ -202,7 +202,7 @@
 
 .timelineDot {
   position: absolute;
-  left: calc(-2rem - 3px);
+  left: calc(-2rem - 2px);
   top: 8px;
   width: 12px;
   height: 12px;
@@ -314,7 +314,7 @@
   }
 
   .timelineDot {
-    left: calc(-1.75rem - 3px);
+    left: calc(-1.75rem - 2px);
     width: 10px;
     height: 10px;
   }
@@ -381,7 +381,7 @@
   }
 
   .timelineDot {
-    left: calc(-1.5rem - 3px);
+    left: calc(-1.5rem - 2px);
     width: 10px;
     height: 10px;
   }
