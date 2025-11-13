@@ -1,321 +1,465 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-
-
-.picture_boader {
-  border: 10px solid rgba(64, 102, 97, 0.5);
-  border-radius: 50%;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-
-.picture {
-  width: 70%;
-  height: 70%;
-  object-fit: cover;
-  object-position: 50% 10%;
-}
-
 .container {
-  display: flex;
-  justify-content: center;
-  height: 75vh;
-  flex-direction: column;
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
-.background {
-  font-size: 5rem;
-  font-family: 'Montserrat';
-  line-height: 1.1;
-  color: var(--bg-text);
-  position: absolute;
-  z-index: 1;
-}
-
-.foreground {
-  z-index: 2;
+.hero {
+  min-height: 65vh;
   display: flex;
-  color: var(--accent-color);
-  justify-content: space-between;
   align-items: center;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.textSection {
+  flex: 1;
+  max-width: 650px;
 }
 
 .name {
-  color: #eee;
-  font-size: 3.5rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.bio {
-  width: max-content;
-  color: #eee;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.bio::before,
-.bio::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.bio::before {
-  background: var(--main-bg);
-  animation: typewriter 2.5s steps(24) 500ms forwards;
-}
-
-.bio::after {
-  margin-left: 0.4rem;
-  width: 0.125em;
-  background: var(--accent-color);
-  animation: typewriter 2.5s steps(24) 500ms forwards,
-    blink 750ms steps(24) infinite;
-}
-
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes blink {
-  to {
-    background: transparent;
-  }
-}
-
-.button {
-  background: var(--accent-color);
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  margin-right: 1.5rem;
-  color: #eee;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
-
-.outlined {
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  color: #eee;
-  border: 2px solid var(--accent-color);
-  background: transparent;
-  cursor: pointer;
-}
-
-.button:hover,
-.outlined:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.illustration {
-  height: 500px;
-  width: 460px;
-}
-
-/* 4K Screens */
-@media screen and (min-width: 2000px) {
-  .background {
-    font-size: 8.5rem;
-  }
-
-  .content {
-    padding: 0 3rem;
-  }
-
-  .name {
-    font-size: 6rem;
-  }
-
-  .bio {
-    font-size: 3rem;
-    margin-bottom: 5rem;
-  }
-
-  .button {
-    font-size: 2rem;
-  }
-
-  .outlined {
-    font-size: 2rem;
-  }
-
-  .illustration {
-    height: 900px;
-    width: 700px;
-  }
-}
-
-/* iPad Pro */
-@media screen and (max-width: 1100px) {
-  .background {
-    display: none;
-  }
-
-  .container {
-    display: block;
-  }
-
-  .foreground {
-    margin: 4rem 0;
-    display: block;
-    text-align: center;
-  }
-
-  .name {
-    font-size: 4rem;
-  }
-
-  .bio {
-    font-size: 1.75rem;
-    margin: 0.75rem auto 3rem;
-  }
-
-  .illustration {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    height: 700px;
-    width: 600px;
-  }
-
-  .picture {
-    border-radius: 250px;
-    display: hidden;
-    object-fit: cover;
-  }
-}
-
-/* iPad */
-@media screen and (max-width: 900px) {
-  .foreground {
-    margin: 2rem 0;
-  }
-
-  .name {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .bio {
-    font-size: 1.5rem;
-  }
-
-  .illustration {
-    height: 550px;
-    width: 420px;
-    bottom: -50px;
-  }
-}
-
-@media screen and (orientation: landscape) and (max-width: 1050px) {
-  .container {
-    display: flex;
-  }
-
-  .illustration {
-    display: none;
-  }
-}
-
-/* Phone */
-@media screen and (max-width: 600px) {
-  .foreground {
-    margin: 0;
-  }
-
-  .name {
-    font-size: 2rem;    
-    margin-bottom: 2rem;
-
-  }
-
-  .bio {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .button {
-    font-size: 0.5rem;
-  }
-
-  .outlined {
-    font-size: 0.5rem;
-  }
-
-  .illustration {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 75vw;
-    height: 50vh;
-    z-index: 1;
-  }
-}
-
-.cardContainer {
-  margin: 1.5rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 0.7fr));
-  gap: 1.5rem;
-  bottom: 0;
-}
-
-@media only screen and (max-width: 1100px) {
-  .cardContainer {
-    display: none;
-  }
-
-  .right {
-    display: none;
-  }
-}
-
-.card {
-  background: var(--transparent-bg);
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  cursor: pointer;
-  padding-right: 0%;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
-.card:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+.title {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.5px;
 }
 
-.content {
-  padding: 1rem;
-  border-radius: 0 0 20px 20px;
+.description {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
 }
 
-.content p {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
+.expertise {
+  margin-bottom: 2.5rem;
 }
 
-.tags {
+.expertiseTitle {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.6;
+}
+
+.expertiseGrid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0.5rem 0 0.5rem;
+  gap: 0.75rem;
 }
 
-.tags span {
-  margin: 0.5rem 0.5rem 0 0;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  transition: all 0.2s;
+.expertiseTag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.expertiseTag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryButton {
+  background: var(--accent-color);
+  color: #1e1e1e;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.secondaryButton:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.imageSection {
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Experience Timeline */
+.experience {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  color: var(--text-color);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 2rem;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    var(--accent-color),
+    rgba(255, 255, 255, 0.15)
+  );
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineItem:last-child .timeline::before {
+  bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: calc(-2rem - 2px);
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 2px solid var(--main-bg);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15);
+  z-index: 2;
+}
+
+.timelineContent {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.timelineContent:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent-color);
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+  gap: 1rem;
+}
+
+.jobTitle {
+  color: var(--text-color);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.3;
+}
+
+.company {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.period {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  opacity: 0.55;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.25rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.jobDescription {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin: 0;
+  opacity: 0.82;
+}
+
+/* Tablet and smaller */
+@media screen and (max-width: 1024px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .textSection {
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .imageWrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+  .experience {
+    margin-top: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.75rem;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timelineDot {
+    left: calc(-1.75rem - 2px);
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero {
+    min-height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .heroContent {
+    gap: 2.5rem;
+  }
+
+  .name {
+    font-size: 2.25rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .imageWrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .experience {
+    margin-top: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 4px;
+  }
+
+  .timelineDot {
+    left: calc(-1.5rem - 2px);
+    width: 10px;
+    height: 10px;
+  }
+
+  .timelineItem {
+    margin-bottom: 1.5rem;
+  }
+
+  .timelineContent {
+    padding: 1.25rem;
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+
+  .jobTitle {
+    font-size: 1rem;
+  }
+
+  .company {
+    font-size: 0.85rem;
+  }
+
+  .jobDescription {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .name {
+    font-size: 1.9rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .expertiseTag {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .timelineItem {
+    margin-bottom: 1.25rem;
+  }
+
+  .timelineContent {
+    padding: 1.1rem;
+  }
+
+  .jobTitle {
+    font-size: 0.95rem;
+  }
+
+  .company {
+    font-size: 0.8rem;
+  }
+
+  .jobDescription {
+    font-size: 0.82rem;
+  }
 }
 

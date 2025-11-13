@@ -62,7 +62,7 @@
 }
 
 .Medical-Imaging:hover {
-  background: rgba(72, 86, 197 0.25);
+  background: rgba(72, 86, 197, 0.25);
 }
 
 .SpaCy {
@@ -86,7 +86,7 @@
 }
 
 .Transformers:hover {
-  background: rgba(13, 250, 49 0.25);
+  background: rgba(13, 250, 49, 0.25);
 }
 
 .BERT {
