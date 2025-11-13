@@ -50,14 +50,14 @@ const ContactPage = () => {
         <div className={styles.bio}>
           <p>
             PhD Machine Learning Engineer with 8+ years building production ML systems for Large Language Models, NLP,
-            Computer Vision, and real-time data pipelines at scale. Co-founded XPensAI, an AI-powered SaaS platform serving
-            30+ businesses, leading development of core ML algorithms for automated expense tracking and receipt processing.
-            Designed multi-agent LLM frameworks at Amazon, improving functional success rates through rigorous experimentation
-            and production monitoring.
+            Computer Vision, and real-time data pipelines at scale. Co-founded XPensAI, leading development of core ML
+            algorithms for automated expense tracking and receipt processing with 90.45% accuracy. Designed multi-agent
+            LLM frameworks at Amazon, improving functional success rates by 12% through rigorous experimentation and
+            production monitoring.
           </p>
           <p>
             Proven track record deploying GenAI, RAG pipelines, and traditional ML solutions that drive measurable business
-            impact. Published at top-tier AI conferences including NeurIPS, WACV, and IGARSS.
+            impact. Published 7 papers at top-tier AI conferences including WACV, IGARSS, CHASE, and CHAOS.
           </p>
         </div>
 

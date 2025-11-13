@@ -1,93 +1,99 @@
 import Link from 'next/link';
-// import Illustration from '../components/Illustration';
 import Image from "next/image";
 import styles from '../styles/HomePage.module.css';
+import getExperience from './api/experience';
 
-export default function HomePage() {
+export default function HomePage({ experience }) {
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.background}>
-          <h1>AI</h1>
-          <h1>Research</h1>
-        </div>
-        <div className={styles.foreground}>
-          <div className={styles.content}>
-            <h1 className={styles.name}>Kostas Georgiou</h1>
-            <h6 className={styles.bio}>Machine Learning Engineer</h6>
-            <div className={styles.cardContainer}>
-              <div className={styles.card}>
-                <div className={styles.content}>
-                  <h4>Skill Set</h4>
-                  <div className={styles.tags}>
-                    <span key='Research' className='Research'>
-                      Research
-                    </span>
-                    <span key='Computer-Vision' className='Computer-Vision'>
-                      Computer-Vision
-                    </span>
-                    <span key='LLMs' className='LLMs'>
-                      LLMs
-                    </span>
-                    <span key='MIM' className='MIM'>
-                      Masked-Image-Modeling
-                    </span>
-                    <span key='PyTorch' className='PyTorch'>
-                      PyTorch
-                    </span>
-                    <span key='Tensorflow' className='Tensorflow'>
-                      Tensorflow
-                    </span>
-                    <span key='Apache-Spark' className='Apache-Spark'>
-                      Apache-Spark
-                    </span>
-                    <span key='SQL' className='SQL'>
-                      SQL
-                    </span>
-                    <span key='MLOps' className='MLOps'>
-                      MLOps
-                    </span>
-                    <span key='Data-Engineering' className='Data-Engineering'>
-                     Data-Engineering
-                    </span>
-                    <span key='Bots' className='Bots'>
-                      Bots
-                    </span>
-                  </div>
-                </div>
+    <div className={styles.container}>
+      <div className={styles.hero}>
+        <div className={styles.heroContent}>
+          <div className={styles.textSection}>
+            <h1 className={styles.name}>Konstantinos Georgiou</h1>
+            <h2 className={styles.title}>Machine Learning Engineer</h2>
+
+            <p className={styles.description}>
+              PhD Machine Learning Engineer with 8+ years building production ML systems
+              for LLMs, Computer Vision, NLP, and real-time data pipelines at scale.
+              Led cross-functional initiatives integrating GenAI, RAG pipelines, and
+              traditional ML into scalable production platforms.
+            </p>
+
+            <div className={styles.expertise}>
+              <div className={styles.expertiseTitle}>Specialization</div>
+              <div className={styles.expertiseGrid}>
+                <span className={styles.expertiseTag}>LLMs & GenAI</span>
+                <span className={styles.expertiseTag}>Agentic Workflows</span>
+                <span className={styles.expertiseTag}>Prompt Engineering & RAG</span>
+                <span className={styles.expertiseTag}>Computer Vision</span>
+                <span className={styles.expertiseTag}>NLP</span>
+                <span className={styles.expertiseTag}>Applied Research</span>
+                <span className={styles.expertiseTag}>AWS & Azure</span>
+                <span className={styles.expertiseTag}>Apache Spark</span>
+                <span className={styles.expertiseTag}>Docker</span>
+                <span className={styles.expertiseTag}>Python</span>
+                <span className={styles.expertiseTag}>PyTorch</span>
               </div>
             </div>
-            <Link href="/resume">
-              <button className={styles.button}>Resume</button>
-            </Link>
-            {/* <Link href="/projects">
-              <button className={styles.button}>View Projects</button>
-            </Link> */}
-            <Link href="/contact">
-              <button className={styles.outlined}>Contact</button>
-            </Link>
+
+            <div className={styles.actions}>
+              <Link href="/resume">
+                <button className={styles.primaryButton}>Resume</button>
+              </Link>
+              <Link href="/contact">
+                <button className={styles.secondaryButton}>Contact</button>
+              </Link>
+            </div>
           </div>
-          {/* <Illustration className={styles.illustration} /> */}
-          <div className={styles.right}>
-            <div className={styles.picture_boader}>
+
+          <div className={styles.imageSection}>
+            <div className={styles.imageWrapper}>
               <Image
-                className={styles.picture}
+                className={styles.profileImage}
                 src="/me.jpeg"
-                width={300}
-                height={300}
-                alt="Kostas' Picture"
+                width={280}
+                height={280}
+                alt="Konstantinos Georgiou"
               />
             </div>
-
           </div>
         </div>
       </div>
-    </>
+
+      <div className={styles.experience}>
+        <h2 className={styles.sectionTitle}>Experience</h2>
+
+        <div className={styles.timeline}>
+          {experience.map((job) => (
+            <div key={job.id} className={styles.timelineItem}>
+              <div className={styles.timelineDot}></div>
+              <Link href="/resume">
+                <div className={styles.timelineContent}>
+                  <div className={styles.timelineHeader}>
+                    <div>
+                      <h3 className={styles.jobTitle}>{job.title}</h3>
+                      <p className={styles.company}>{job.company} - {job.location}</p>
+                    </div>
+                    <span className={styles.period}>{job.period}</span>
+                  </div>
+                  <p className={styles.jobDescription}>{job.description}</p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
 export async function getStaticProps() {
+  const experience = getExperience();
+
   return {
-    props: { title: 'Home' },
+    props: {
+      title: 'Home',
+      experience
+    },
   };
 }

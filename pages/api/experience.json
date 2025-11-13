@@ -1,0 +1,50 @@
+[
+  {
+    "id": "amazon-2025",
+    "title": "Applied Scientist L5",
+    "company": "Amazon",
+    "location": "US",
+    "period": "Summer 2025",
+    "description": "Designed and deployed multi-agent LLM framework converting natural language to executable code, improving functional success rates by 12%. Built real-time detection system correctly identifying 93% of unfeasible requests with 4.5x performance improvement."
+  },
+  {
+    "id": "xpensai",
+    "title": "Co-Founder & ML Engineer",
+    "company": "XPensAI",
+    "location": "United Kingdom",
+    "period": "2024 - Now",
+    "description": "Launched AI-powered SaaS platform used by 30+ businesses, reducing manual expense entry by 65%. Led development improving processing speed by 120%. Built deep learning solutions achieving 95% accuracy on receipt scanning."
+  },
+  {
+    "id": "utk",
+    "title": "Machine Learning Researcher",
+    "company": "University of Tennessee",
+    "location": "US",
+    "period": "2021 - Now",
+    "description": "Developed self-supervised framework using masking strategies. Created feature masking strategy raising Macro F1 by 6%. Advanced masked image modeling achieving 5% accuracy improvement over state-of-the-art. Developed fine-tuning strategies reducing training time by 32% improving Macro F1 by 5.4%."
+  },
+  {
+    "id": "perftech",
+    "title": "Data Engineer",
+    "company": "Performance Technologies S.A.",
+    "location": "Greece",
+    "period": "2019 - 2021",
+    "description": "Led terabyte-scale data replication reducing processing time from days to minutes. Developed ML model delivering 34% improvement over baseline. Designed SIP call quality benchmarking service."
+  },
+  {
+    "id": "patras",
+    "title": "Machine Learning Researcher",
+    "company": "University of Patras",
+    "location": "Greece",
+    "period": "2018 - 2019",
+    "description": "Conducted ML research specializing in graph neural networks and scalable algorithm design for large-scale network analysis. Optimized community detection algorithm execution time by 84%, creating first scalable solution while maintaining high accuracy through systematic performance optimization and rigorous evaluation."
+  },
+  {
+    "id": "globalvoices",
+    "title": "Software Engineer",
+    "company": "Global Voices Ltd",
+    "location": "UK",
+    "period": "2017 - 2018",
+    "description": "Led development on proprietary CMS reducing critical bugs. Optimized CI/CD pipelines resulting in 50% reduction in rollbacks."
+  }
+]
