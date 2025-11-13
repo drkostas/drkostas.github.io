@@ -1,30 +1,38 @@
-/* ProjectsPage.module.css */
+/* PapersPage.module.css */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .sortControls {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .sortLabel {
   color: var(--text-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-right: 0.25rem;
+  opacity: 0.8;
 }
 
 .sortButton {
   background: var(--button-bg);
   color: var(--button-text);
   border: 2px solid transparent;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.2s ease;
@@ -42,75 +50,129 @@
   border-color: var(--accent-color);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1rem 0 2rem 0;
+}
+
 .card {
   background: var(--article-bg);
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 100%; /* Make the card full width */
-  margin-bottom: 0.5rem; /* Add some space between cards */
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+  padding: 1.25rem 1.5rem;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .card:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
-}
-.content {
-  padding: 1rem;
-  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateX(4px);
+  border-left-width: 4px;
 }
 
-.content p {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-}
-
-.card p {
-  margin-bottom: 1.25rem;
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
 }
 
 .card h3 {
   color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
 }
 
-.container {
-  display: flex;
-  flex-direction: column; /* Stack cards vertically */
-  gap: 0.2rem;
-  margin: 1.5rem 0;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
-.underline {
-  text-decoration: underline;
+.citationBadge {
+  background: var(--button-bg);
   color: var(--accent-color);
+  padding: 0.3rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid var(--accent-color);
+  opacity: 0.9;
 }
 
-.underline:hover {
-  color: var(--accent-color-hover);
+.citationBadge::before {
+  content: "★";
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
+.abstract {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+  opacity: 0.88;
+  color: var(--text-color);
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  flex-wrap: wrap;
+}
+
+.metadataItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.metadataLabel {
+  font-weight: 600;
+  opacity: 0.65;
+  font-size: 0.75rem;
+}
+
+.metadataValue {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.metadataItem::after {
+  content: "•";
+  margin-left: 1.25rem;
+  opacity: 0.4;
+}
+
+.metadataItem:last-child::after {
+  content: none;
+}
 
 .underline {
-  padding: 0.2rem 0;
-  font-size: 0.9rem;
-  letter-spacing: 0;
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  color: white;
+  color: var(--accent-color);
   text-decoration: none;
-  background-image: linear-gradient(120deg,
-      var(--accent-color) 100%,
-      var(--accent-color) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  background: var(--button-bg);
+  border: 1px solid transparent;
 }
 
 .underline:hover {
-  background-size: 100% 88%;
+  border-color: var(--accent-color);
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

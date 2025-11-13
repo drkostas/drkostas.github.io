@@ -47,23 +47,31 @@ const PapersPage = ({ papers }) => {
       <div className={styles.container}>
         {sortedPapers.map((paper) => (
           <div key={paper.id} className={styles.card}>
-            <div className={styles.content}>
+            <div className={styles.cardHeader}>
               <h3>{paper.title}</h3>
-              <p><strong>Abstract:</strong> {paper.abstract}</p>
-              <p><strong>Conference:</strong> {paper.conference}</p>
-              <p><strong>Year:</strong> {paper.year}</p>
-              <p><strong>Citations:</strong> {paper.citations}</p>
-              <div className={styles.cta}>
-                <a
-                  href={paper.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.underline}
-                >
-                  Read Paper
-                </a>
+              {paper.citations > 0 && (
+                <div className={styles.citationBadge}>{paper.citations}</div>
+              )}
+            </div>
+            <p className={styles.abstract}>{paper.abstract}</p>
+            <div className={styles.metadata}>
+              <div className={styles.metadataItem}>
+                <span className={styles.metadataLabel}>Conference:</span>
+                <span className={styles.metadataValue}>{paper.conference}</span>
+              </div>
+              <div className={styles.metadataItem}>
+                <span className={styles.metadataLabel}>Year:</span>
+                <span className={styles.metadataValue}>{paper.year}</span>
               </div>
             </div>
+            <a
+              href={paper.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.underline}
+            >
+              Read Paper →
+            </a>
           </div>
         ))}
       </div>
