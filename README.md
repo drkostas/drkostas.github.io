@@ -29,7 +29,7 @@ npm run dev
 
 Visit http://localhost:4321.
 
-For the live-data widgets to work, copy `.env.example` (TBD — currently fields are documented in `.env.local` comments) and fill in your own keys. Most of the site is functional without them; only the stats / reactions / wall / contact form need real credentials.
+For the live-data widgets to work, copy `.env.example` to `.env.local` and fill in your own keys. Most of the site is functional without them; only the stats, reactions, wall and contact form need real credentials. The wall, reactions, comments and CV counters read a Supabase project — the free tier covers all of it, and `.env.example` says which three values to take from Project Settings → API.
 
 ## Structure
 
