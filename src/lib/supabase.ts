@@ -21,9 +21,22 @@ const SECRET_KEY = import.meta.env.SUPABASE_SECRET_KEY ?? process.env.SUPABASE_S
 let _public: SupabaseClient | null = null;
 let _admin: SupabaseClient | null = null;
 
+/** Name the variables that are actually missing, rather than the pair that might be. */
+function missing(...pairs: [string, string | undefined][]): string[] {
+  return pairs.filter(([, v]) => !v).map(([k]) => k);
+}
+
 export function getSupabasePublic(): SupabaseClient | null {
-  if (!SUPABASE_URL || !PUBLIC_KEY) {
-    console.warn("[supabase] missing PUBLIC_SUPABASE_URL / PUBLIC_SUPABASE_PUBLISHABLE_KEY");
+  const gaps = missing(
+    ["PUBLIC_SUPABASE_URL", SUPABASE_URL],
+    ["PUBLIC_SUPABASE_PUBLISHABLE_KEY", PUBLIC_KEY],
+  );
+  if (gaps.length) {
+    // ⚠️ THIS WARNING USED TO NAME BOTH VARIABLES WHETHER OR NOT BOTH WERE MISSING, and the
+    // caller falls back to empty results, so a single missing key looks exactly like a site with
+    // no comments and no reactions. That is not hypothetical: one absent key survived three
+    // production builds because the pages rendered perfectly and simply showed nothing.
+    console.warn(`[supabase] not configured, returning no data — missing: ${gaps.join(", ")}`);
     return null;
   }
   if (!_public) {
@@ -35,8 +48,9 @@ export function getSupabasePublic(): SupabaseClient | null {
 }
 
 export function getSupabaseAdmin(): SupabaseClient | null {
-  if (!SUPABASE_URL || !SECRET_KEY) {
-    console.warn("[supabase] missing SUPABASE_SECRET_KEY");
+  const gaps = missing(["PUBLIC_SUPABASE_URL", SUPABASE_URL], ["SUPABASE_SECRET_KEY", SECRET_KEY]);
+  if (gaps.length) {
+    console.warn(`[supabase] admin client not configured — missing: ${gaps.join(", ")}`);
     return null;
   }
   if (!_admin) {
