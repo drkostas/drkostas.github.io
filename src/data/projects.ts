@@ -137,7 +137,7 @@ export const projects: Project[] = [
   {
     slug: "macro-engine",
     name: "macro-engine",
-    image: "https://opengraph.githubassets.com/1/drkostas/macro-engine",
+    image: "/projects/macro-engine.png",
     description:
       "A self-hosted nutrition tracker for people who track their macros closely. Log meals, track weight, set a deficit target, and plan meal variations. It computes your TDEE and daily macro targets, with optional Garmin sync and natural-language meal parsing.",
     tags: ["Next.js", "Node", "PostgreSQL", "Docker", "nutrition"],
@@ -322,7 +322,7 @@ export const projects: Project[] = [
   {
     slug: "banister",
     name: "banister",
-    image: "https://opengraph.githubassets.com/1/drkostas/banister",
+    image: "/projects/banister.png",
     description:
       "A TypeScript port of soma's training engine. It fits the Banister fitness-fatigue model to your training data, adds Daniels and Gilbert VDOT math for race paces, and covers readiness, pace zones, and a performance management chart. Pure functions, checked against the Python original with golden fixtures.",
     tags: ["npm", "TypeScript", "sports-science", "soma"],
@@ -334,7 +334,7 @@ export const projects: Project[] = [
   {
     slug: "run-dj",
     name: "run-dj",
-    image: "https://opengraph.githubassets.com/1/drkostas/run-dj",
+    image: "/projects/run-dj.png",
     description:
       "The core of soma's running DJ. Given a live heart rate it picks the target music BPM for that effort, and given a pool of songs it shuffles a session so same-artist tracks are spaced evenly instead of clustering. No I/O, so the same math runs on a treadmill, a playlist builder, or a cron job.",
     tags: ["npm", "TypeScript", "Spotify", "soma"],
