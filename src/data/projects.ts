@@ -211,6 +211,18 @@ export const projects: Project[] = [
 
   // ---- Tools (PyPI) ----
   {
+    slug: "plaincard",
+    name: "plaincard",
+    image: "/projects/cards/plaincard.png",
+    description:
+      "Makes plain, consistent images for projects from a few lines of spec. Project cards, README banners, diagrams and icons, all in one dark style with a monospace name and a flat line drawing. A pip package and a Claude Code plugin, and the tool that drew the cards on this page.",
+    tags: ["PyPi", "Python", "SVG", "Claude-Code", "CLI"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/plaincard",
+    pypi: "https://pypi.org/project/plaincard/",
+    addedAt: new Date("2026-10-09T13:00:00"),
+  },
+  {
     slug: "claude-ops",
     name: "claude-ops",
     image: "/projects/cards/claude-ops.png",
