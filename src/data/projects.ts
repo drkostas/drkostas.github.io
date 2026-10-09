@@ -13,6 +13,7 @@ export interface Project {
   live?: string;
   scholar?: string;
   pypi?: string;
+  npm?: string;
   /** When this project was added to the site. Optional — if missing, the RSS
    *  feed falls back to the site-launch date so the item still appears. */
   addedAt?: Date;
@@ -134,6 +135,17 @@ export const projects: Project[] = [
 
   // ---- Products ----
   {
+    slug: "macro-engine",
+    name: "macro-engine",
+    image: "https://opengraph.githubassets.com/1/drkostas/macro-engine",
+    description:
+      "A self-hosted nutrition tracker for people who track their macros closely. Log meals, track weight, set a deficit target, and plan meal variations. It computes your TDEE and daily macro targets, with optional Garmin sync and natural-language meal parsing.",
+    tags: ["Next.js", "Node", "PostgreSQL", "Docker", "nutrition"],
+    category: "Products",
+    source_code: "https://github.com/drkostas/macro-engine",
+    addedAt: new Date("2026-10-09T11:48:00"),
+  },
+  {
     slug: "gkos-dev",
     name: "gkos.dev (this site)",
     image: "/projects/gkos-dev-hero.png",
@@ -198,6 +210,139 @@ export const projects: Project[] = [
   },
 
   // ---- Tools (PyPI) ----
+  {
+    slug: "claude-ops",
+    name: "claude-ops",
+    image: "https://opengraph.githubassets.com/1/drkostas/claude-ops",
+    description:
+      "Command-line tools for running many Claude Code chats on one machine. Find any chat across your project folders, send a message into one that is already running, start named chats in tmux, and restore transcripts that Claude Code deleted.",
+    tags: ["PyPi", "Python", "CLI", "tmux", "automation"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/claude-ops",
+    pypi: "https://pypi.org/project/claude-ops/",
+    addedAt: new Date("2026-10-09T12:00:00"),
+  },
+  {
+    slug: "claude-human",
+    name: "claude-human",
+    image: "https://opengraph.githubassets.com/1/drkostas/claude-human",
+    description:
+      "A toolkit for a Mac shared by a person and an agent, so the agent can hand one step to a human: approve a prompt, check a window, type a password at the lock screen. It captures the screen, streams a single window to your phone, and sends notifications that Android will not silence.",
+    tags: ["PyPi", "Python", "Swift", "TypeScript", "macOS"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/claude-human",
+    pypi: "https://pypi.org/project/claude-human/",
+    addedAt: new Date("2026-10-09T11:59:00"),
+  },
+  {
+    slug: "couchctl",
+    name: "couchctl",
+    image: "https://opengraph.githubassets.com/1/drkostas/couchctl",
+    description:
+      "A command-line tool for the Samsung and Android TVs on your network. Read and switch power, open apps, press remote keys, and redirect the remote's fixed app buttons, like Prime Video or Disney+, to the apps you actually use.",
+    tags: ["PyPi", "Python", "CLI", "adb", "smart-home"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/couchctl",
+    pypi: "https://pypi.org/project/couchctl/",
+    addedAt: new Date("2026-10-09T11:58:00"),
+  },
+  {
+    slug: "iphone2android",
+    name: "iphone2android",
+    image: "https://opengraph.githubassets.com/1/drkostas/iphone2android",
+    description:
+      "Moves you from an iPhone to an Android phone without leaving data behind. It reads an encrypted iPhone backup and recovers what the official transfer misses: messages, call history, photos, app data, accounts, and even the exact home screen layout, over adb.",
+    tags: ["PyPi", "Python", "CLI", "adb", "Android"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/iphone2android",
+    pypi: "https://pypi.org/project/iphone2android/",
+    addedAt: new Date("2026-10-09T11:57:00"),
+  },
+  {
+    slug: "3d-review",
+    name: "3d-review",
+    image: "https://raw.githubusercontent.com/drkostas/3d-review/main/docs/bench.png",
+    description:
+      "A bench for reviewing a 3D-printable design together with an assistant. You load the model, mark what is wrong on a part, and receive answers as pictures from the same camera. A step ledger keeps a locked placement locked, and a requirement board is proven able to fail so a green board is not a false pass.",
+    tags: ["PyPi", "Python", "trimesh", "Penpot", "3D-printing"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/3d-review",
+    pypi: "https://pypi.org/project/3d-review/",
+    addedAt: new Date("2026-10-09T11:56:00"),
+  },
+  {
+    slug: "3d-card",
+    name: "3d-card",
+    image: "https://raw.githubusercontent.com/drkostas/3d-card/main/docs/example.png",
+    description:
+      "Turns a set of 3D-printable parts into one printable kit card, like the sprue of a plastic model kit. It lays the parts on a frame, gates and numbers them, then cuts the gates itself and checks every piece comes back whole and loose. It also makes print-in-place joints with clearances measured from real test coupons.",
+    tags: ["PyPi", "Python", "build123d", "trimesh", "3D-printing"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/3d-card",
+    pypi: "https://pypi.org/project/3d-card/",
+    addedAt: new Date("2026-10-09T11:55:00"),
+  },
+  {
+    slug: "3d-base",
+    name: "3d-base",
+    image: "https://raw.githubusercontent.com/drkostas/3d-base/main/docs/example.png",
+    description:
+      "Renders pictures of 3D meshes with no display, OpenGL, or browser, so a script can inspect models for printing. It keeps a per-pixel depth so overlapping parts draw in the right order, shades curves smoothly while keeping real edges sharp, and checks an exported STL for extra bodies and sealed cavities.",
+    tags: ["PyPi", "Python", "numpy", "STL", "3D-printing"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/3d-base",
+    pypi: "https://pypi.org/project/3d-base/",
+    addedAt: new Date("2026-10-09T11:54:00"),
+  },
+  {
+    slug: "sqlgate",
+    name: "sqlgate",
+    image: "https://opengraph.githubassets.com/1/drkostas/sqlgate",
+    description:
+      "Serves a Postgres or MySQL database you host yourself to serverless apps, without opening a database port to the internet. It answers in the exact shape the Neon serverless driver speaks, so an app already using that driver works against your own database by changing only the connection string.",
+    tags: ["npm", "Node", "Postgres", "MySQL", "serverless"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/sqlgate",
+    npm: "https://www.npmjs.com/package/@drkostas/sqlgate",
+    pypi: "https://pypi.org/project/sqlgate-client/",
+    addedAt: new Date("2026-10-09T11:53:00"),
+  },
+  {
+    slug: "soma-style",
+    name: "soma-style",
+    image: "https://raw.githubusercontent.com/drkostas/soma-style/main/assets/palette-banner.png",
+    description:
+      "The shared design tokens for the soma apps: the macro colors, the chart palette, and the status colors in one place, so soma, macro-engine, and the rest all render the same. Ships TypeScript tokens and Tailwind v4 CSS.",
+    tags: ["npm", "TypeScript", "Tailwind", "design-tokens", "soma"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/soma-style",
+    npm: "https://www.npmjs.com/package/soma-style",
+    addedAt: new Date("2026-10-09T11:51:00"),
+  },
+  {
+    slug: "banister",
+    name: "banister",
+    image: "https://opengraph.githubassets.com/1/drkostas/banister",
+    description:
+      "A TypeScript port of soma's training engine. It fits the Banister fitness-fatigue model to your training data, adds Daniels and Gilbert VDOT math for race paces, and covers readiness, pace zones, and a performance management chart. Pure functions, checked against the Python original with golden fixtures.",
+    tags: ["npm", "TypeScript", "sports-science", "soma"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/banister",
+    npm: "https://www.npmjs.com/package/banister",
+    addedAt: new Date("2026-10-09T11:50:00"),
+  },
+  {
+    slug: "run-dj",
+    name: "run-dj",
+    image: "https://opengraph.githubassets.com/1/drkostas/run-dj",
+    description:
+      "The core of soma's running DJ. Given a live heart rate it picks the target music BPM for that effort, and given a pool of songs it shuffles a session so same-artist tracks are spaced evenly instead of clustering. No I/O, so the same math runs on a treadmill, a playlist builder, or a cron job.",
+    tags: ["npm", "TypeScript", "Spotify", "soma"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/run-dj",
+    npm: "https://www.npmjs.com/package/run-dj",
+    addedAt: new Date("2026-10-09T11:49:00"),
+  },
   {
     slug: "python-search-engine",
     name: "Python Search Engine",
@@ -282,6 +427,18 @@ export const projects: Project[] = [
   },
 
   // ---- Fun ----
+  {
+    slug: "poke-starters",
+    name: "poke-starters",
+    image: "https://raw.githubusercontent.com/drkostas/poke-starters/main/screenshots/hero.png",
+    description:
+      "Finds the best Pokémon starter trio you could actually catch, across Kanto, Johto, Hoenn, and Sinnoh. Pick your regions, types, and a power budget, and it searches every legal combination, then reveals the winning team through a gated slot machine so the result is not spoiled. Real Town Maps show where to catch each one.",
+    tags: ["JavaScript", "Web-Worker", "Pokemon", "game"],
+    category: "Fun",
+    source_code: "https://github.com/drkostas/poke-starters",
+    demo: "https://poke-starters-demo.gkos.dev",
+    addedAt: new Date("2026-10-09T11:52:00"),
+  },
   {
     slug: "youtube-comment-bot",
     name: "YouTube Comment Bot",
