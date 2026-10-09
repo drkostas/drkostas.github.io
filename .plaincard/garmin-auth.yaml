@@ -1,0 +1,8 @@
+kind: card
+name: garmin-auth
+line: "Garmin Connect sign-in that heals itself: login, token refresh and recovery from rate limits."
+accent: teal
+diagram:
+  - lock: {label: token}
+  - arrow: refresh
+  - watch: {label: Garmin}

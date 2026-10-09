@@ -1,0 +1,10 @@
+kind: card
+name: Numpy CNN
+line: A convolutional neural network written from scratch in NumPy.
+accent: amber
+diagram:
+  - box: {text: image}
+  - arrow
+  - box: {text: conv net, accent: true}
+  - arrow
+  - box: {text: class}

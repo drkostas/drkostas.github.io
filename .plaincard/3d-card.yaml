@@ -1,0 +1,8 @@
+kind: card
+name: 3d-card
+line: "Turn 3D-printable parts into one printable kit card, like a model-kit sprue."
+accent: clay
+diagram:
+  - cube: {label: parts}
+  - arrow: lay out
+  - box: {text: kit card, accent: true}

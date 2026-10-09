@@ -1,0 +1,10 @@
+kind: card
+name: Cross-scale MAE
+line: "Pretrains an image model on satellite photos at many zoom levels, with no labels."
+accent: sky
+diagram:
+  - globe: {label: satellite}
+  - arrow
+  - box: {text: image model, accent: true}
+  - arrow
+  - chart: {label: features}

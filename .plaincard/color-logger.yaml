@@ -1,0 +1,8 @@
+kind: card
+name: Color Logger
+line: "Prints your program's log lines in colour in the terminal."
+accent: sky
+diagram:
+  - box: {text: log lines}
+  - arrow
+  - terminal: {accent: true}

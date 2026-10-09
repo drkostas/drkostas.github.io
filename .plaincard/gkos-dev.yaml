@@ -1,0 +1,10 @@
+kind: card
+name: gkos.dev
+line: A fast static site and blog that keeps its own analytics.
+accent: sky
+diagram:
+  - user
+  - arrow: visit
+  - cloud: {label: site}
+  - line
+  - chart: {label: analytics, accent: true}

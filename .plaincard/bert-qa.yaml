@@ -1,0 +1,10 @@
+kind: card
+name: BERT QA
+line: "A language model that answers questions about a collection of novels."
+accent: sky
+diagram:
+  - user: {label: question}
+  - arrow: ask
+  - box: {text: BERT, accent: true}
+  - arrow
+  - doc: {label: answer}

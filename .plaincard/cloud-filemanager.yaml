@@ -1,0 +1,10 @@
+kind: card
+name: Cloud Files
+line: A high-level file manager for cloud storage like Dropbox.
+accent: blue
+diagram:
+  - folder: {label: files}
+  - arrow:
+  - box: {text: manager, accent: true}
+  - line
+  - cloud: {label: dropbox}

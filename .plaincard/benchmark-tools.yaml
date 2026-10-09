@@ -1,0 +1,8 @@
+kind: card
+name: Benchmark Tools
+line: "Runs your code and measures how fast it is."
+accent: violet
+diagram:
+  - terminal
+  - arrow: run
+  - chart: {accent: true}

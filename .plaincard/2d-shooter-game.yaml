@@ -1,0 +1,8 @@
+kind: card
+name: 2D Shooter
+line: "A simple 2D shooter game that runs in the browser."
+accent: violet
+diagram:
+  - globe: {label: browser}
+  - arrow: runs in
+  - box: {text: 2D shooter, accent: true}

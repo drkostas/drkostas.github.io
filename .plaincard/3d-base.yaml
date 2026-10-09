@@ -1,0 +1,8 @@
+kind: card
+name: 3d-base
+line: "Headless pictures of 3D meshes with correct occlusion, and a health check for exported STL files."
+accent: violet
+diagram:
+  - cube: {accent: true, label: mesh}
+  - arrow: render
+  - pane: {label: picture}

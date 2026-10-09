@@ -1,0 +1,8 @@
+kind: card
+name: macro-engine
+line: "A self-hosted nutrition tracker: log meals, track weight and plan meals to your macro targets."
+accent: amber
+diagram:
+  - box: {text: meal}
+  - arrow: log
+  - chart: {label: targets}

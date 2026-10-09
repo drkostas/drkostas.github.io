@@ -1,0 +1,8 @@
+kind: card
+name: Button Presser
+line: "Presses a physical button whenever Spotify starts playing."
+accent: amber
+diagram:
+  - note: {label: Spotify plays}
+  - arrow
+  - box: {text: button, accent: true}

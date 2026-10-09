@@ -1,0 +1,7 @@
+kind: card
+name: couchctl
+line: "Control Samsung and Android TVs on your network, and send the remote's app buttons where you want."
+accent: amber
+diagram:
+  - tv: {tiles: 3, crossed: 1, highlight: 2}
+  - remote

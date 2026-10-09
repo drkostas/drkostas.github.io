@@ -1,0 +1,10 @@
+kind: card
+name: sqlgate
+line: "Serve a database you host yourself to serverless apps over HTTPS, in the shape the Neon driver speaks."
+accent: green
+diagram:
+  - cloud
+  - arrow: https
+  - gate
+  - line
+  - db

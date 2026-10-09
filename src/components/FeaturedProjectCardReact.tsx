@@ -84,7 +84,7 @@ export function FeaturedProjectCardReact({
         <img
           src={image}
           alt={name}
-          className="h-[280px] rounded-2xl object-cover md:h-[225px]"
+          className="aspect-[2/1] w-full rounded-2xl object-cover"
         />
         <div className="my-4 flex w-full flex-grow flex-col space-y-3 text-balance px-4">
           <h2 className="text-lg font-medium leading-7 tracking-tight text-text-primary">
