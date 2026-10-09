@@ -213,7 +213,7 @@ export const projects: Project[] = [
   {
     slug: "claude-ops",
     name: "claude-ops",
-    image: "https://opengraph.githubassets.com/1/drkostas/claude-ops",
+    image: "/projects/claude-ops.png",
     description:
       "Command-line tools for running many Claude Code chats on one machine. Find any chat across your project folders, send a message into one that is already running, start named chats in tmux, and restore transcripts that Claude Code deleted.",
     tags: ["PyPi", "Python", "CLI", "tmux", "automation"],
@@ -225,7 +225,7 @@ export const projects: Project[] = [
   {
     slug: "claude-human",
     name: "claude-human",
-    image: "https://opengraph.githubassets.com/1/drkostas/claude-human",
+    image: "/projects/claude-human.png",
     description:
       "A toolkit for a Mac shared by a person and an agent, so the agent can hand one step to a human: approve a prompt, check a window, type a password at the lock screen. It captures the screen, streams a single window to your phone, and sends notifications that Android will not silence.",
     tags: ["PyPi", "Python", "Swift", "TypeScript", "macOS"],
@@ -237,7 +237,7 @@ export const projects: Project[] = [
   {
     slug: "couchctl",
     name: "couchctl",
-    image: "https://opengraph.githubassets.com/1/drkostas/couchctl",
+    image: "/projects/couchctl.png",
     description:
       "A command-line tool for the Samsung and Android TVs on your network. Read and switch power, open apps, press remote keys, and redirect the remote's fixed app buttons, like Prime Video or Disney+, to the apps you actually use.",
     tags: ["PyPi", "Python", "CLI", "adb", "smart-home"],
@@ -249,7 +249,7 @@ export const projects: Project[] = [
   {
     slug: "iphone2android",
     name: "iphone2android",
-    image: "https://opengraph.githubassets.com/1/drkostas/iphone2android",
+    image: "/projects/iphone2android.png",
     description:
       "Moves you from an iPhone to an Android phone without leaving data behind. It reads an encrypted iPhone backup and recovers what the official transfer misses: messages, call history, photos, app data, accounts, and even the exact home screen layout, over adb.",
     tags: ["PyPi", "Python", "CLI", "adb", "Android"],
@@ -297,7 +297,7 @@ export const projects: Project[] = [
   {
     slug: "sqlgate",
     name: "sqlgate",
-    image: "https://opengraph.githubassets.com/1/drkostas/sqlgate",
+    image: "/projects/sqlgate.png",
     description:
       "Serves a Postgres or MySQL database you host yourself to serverless apps, without opening a database port to the internet. It answers in the exact shape the Neon serverless driver speaks, so an app already using that driver works against your own database by changing only the connection string.",
     tags: ["npm", "Node", "Postgres", "MySQL", "serverless"],
