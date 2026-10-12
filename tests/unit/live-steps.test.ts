@@ -37,11 +37,12 @@ describe("Live NPC — Step Tracker", () => {
     it("player owns cheap TMs → points at next cheapest", () => {
       const state = computeStepState({
         steps: 500,
-        // Owns numpy + pandas (150 + 200). Next cheapest is tailwind (250).
+        // Owns numpy + pandas. Next cheapest is tailwind, which costs 150 since
+        // the first four TMs were all priced at 150 (StepMilestones.ts).
         hasItemFn: (id) => id === "tm_numpy" || id === "tm_pandas",
       });
       expect(state.nextUnaffordable?.itemId).toBe("tm_tailwind");
-      expect(state.nextUnaffordable?.price).toBe(250);
+      expect(state.nextUnaffordable?.price).toBe(150);
     });
 
     it("all TMs owned → allOwned=true, no nextUnaffordable", () => {

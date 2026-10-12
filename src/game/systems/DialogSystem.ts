@@ -139,7 +139,10 @@ export class DialogSystem {
    * instead of the hung await.
    */
   async showDialog(payload: DialogPayload): Promise<void> {
-    if (this.isActive && this.resolveDialog) {
+    // The guard reads `isActive` alone, and the resolver is set before the first
+    // `await`: template resolution awaits, and a second call made in the same frame
+    // used to find no resolver yet, pass the guard and overwrite the first one.
+    if (this.isActive) {
       return Promise.reject(
         new Error(
           "DialogSystem: showDialog called while another dialog is still open. " +
@@ -148,6 +151,9 @@ export class DialogSystem {
       );
     }
     this.isActive = true;
+    const done = new Promise<void>((resolve) => {
+      this.resolveDialog = resolve;
+    });
     // 0. Resolve {{ namespace.key }} templates (only runs if tokens present)
     const templateResolved = await resolveTemplates(payload.lines);
     // 1. Interpolate {NAME} placeholders using the current save
@@ -163,9 +169,7 @@ export class DialogSystem {
       lines: paginated,
       speakerName,
     });
-    return new Promise<void>((resolve) => {
-      this.resolveDialog = resolve;
-    });
+    return done;
   }
 
   /** Clean up the event listener (call on scene shutdown). */
