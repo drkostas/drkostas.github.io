@@ -67,6 +67,30 @@ const isProd = import.meta.env.PROD;
         }
       })();
     </script>
+    <!-- Optional error reports: an uncaught error is sent to this site's own /api/client-error,
+         which forwards it only when a collector is configured. At most 5 a page view. -->
+    <script is:inline>
+      (function () {
+        var sent = 0;
+        function report(message, source) {
+          if (sent >= 5 || !navigator.sendBeacon) return;
+          sent++;
+          try {
+            navigator.sendBeacon("/api/client-error", JSON.stringify({
+              message: String(message || "unknown error").slice(0, 300),
+              source: String(source || location.pathname).slice(0, 250),
+            }));
+          } catch (e) {}
+        }
+        window.addEventListener("error", function (e) {
+          if (e.message) report(e.message, (e.filename || location.pathname) + ":" + (e.lineno || 0));
+        });
+        window.addEventListener("unhandledrejection", function (e) {
+          var r = e.reason;
+          report("unhandled rejection: " + ((r && r.message) || r), location.pathname);
+        });
+      })();
+    </script>
     <style is:global>
       :root {
         --font-geist-sans: 'Geist Sans', system-ui, sans-serif;
