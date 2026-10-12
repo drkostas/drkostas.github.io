@@ -33,6 +33,7 @@
     "@mdxeditor/editor": "^3.55.0",
     "@supabase/supabase-js": "^2.103.0",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/functions": "^3.4.1",
     "@vercel/speed-insights": "^2.0.0",
     "astro": "^6.1.5",
     "framer-motion": "^12.38.0",
