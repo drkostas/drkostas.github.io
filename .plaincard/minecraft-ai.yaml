@@ -1,0 +1,10 @@
+kind: card
+name: Minecraft AI
+line: "A game agent that learns by trial and error to find its way through mazes in Minecraft."
+accent: green
+diagram:
+  - cube: {label: maze}
+  - arrow: try
+  - box: {text: agent, accent: true}
+  - arrow
+  - check: {label: solved}

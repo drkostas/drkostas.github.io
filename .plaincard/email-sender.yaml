@@ -1,0 +1,10 @@
+kind: card
+name: Email Sender
+line: "Sends emails with attachments through Gmail."
+accent: green
+diagram:
+  - doc: {label: attachment}
+  - arrow
+  - cloud: {label: gmail, accent: true}
+  - arrow: send
+  - user

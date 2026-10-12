@@ -1,0 +1,10 @@
+kind: card
+name: Job Bot
+line: "Emails you every new job listing that matches your search."
+accent: amber
+diagram:
+  - globe: {label: listings}
+  - arrow: match
+  - check: {accent: true}
+  - arrow: email
+  - user

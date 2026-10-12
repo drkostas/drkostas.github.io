@@ -1,0 +1,10 @@
+kind: card
+name: ShiftMD
+line: Builds fair shift schedules for medical departments with constraint solving.
+accent: teal
+diagram:
+  - user: {label: staff}
+  - arrow:
+  - box: {text: solver}
+  - arrow:
+  - doc: {label: schedule, accent: true}

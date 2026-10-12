@@ -1,0 +1,8 @@
+kind: card
+name: plaincard
+line: "Makes plain, consistent images for projects from a few lines of spec."
+accent: sky
+diagram:
+  - doc: {label: spec}
+  - arrow: draw
+  - box: {text: card, accent: true}

@@ -1,0 +1,10 @@
+kind: card
+name: ExPLoRe
+line: "Teaches an image model to learn from a pretrained teacher without labels, focusing on the patches that matter."
+accent: blue
+diagram:
+  - panes: {rows: 2, cols: 2, highlight: [0, 0]}
+  - arrow: learn
+  - box: {text: image model, accent: true}
+  - arrow
+  - chart: {label: features}

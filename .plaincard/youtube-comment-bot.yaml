@@ -1,0 +1,10 @@
+kind: card
+name: YouTube Bot
+line: "Posts the first comment on every new video of the channels you choose."
+accent: clay
+diagram:
+  - globe: {label: youtube}
+  - arrow: new video
+  - box: {text: bot}
+  - arrow: posts
+  - pane: {accent: true}

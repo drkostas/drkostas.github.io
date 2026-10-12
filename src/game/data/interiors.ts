@@ -567,8 +567,8 @@ export const INTERIORS: Record<string, InteriorDef> = {
           ],
         },
       },
-      // Trainer 6 — hands out ExPLoRe (ECCV 2026 under review,
-      // Kostas's latest). Stands on the lower half as an Applied
+      // Trainer 6 — hands out ExPLoRe (ECCV 2026, Kostas's
+      // latest). Stands on the lower half as an Applied
       // Scientist persona.
       {
         id: "gym_jenna",
@@ -579,17 +579,17 @@ export const INTERIORS: Record<string, InteriorDef> = {
         dialog: [
           "I'm a pre-training specialist!",
           "KOSTAS's newest paper ExPLoRe",
-          "is under review at ECCV 2026.",
-          "Exploration-driven pre-training",
-          "for long-range remote sensing.",
-          "Fingers crossed for acceptance!",
+          "was published at ECCV 2026!",
+          "It turns Soft-MoE dispatch",
+          "weights into per-patch loss",
+          "weights, with no extra labels.",
         ],
         autoGive: {
           itemId: "paper_explore",
           asidePosition: { x: 9, y: 14 },  // match new position
           clearedDialog: [
-            "Can't wait to see ExPLoRe",
-            "at ECCV next summer!",
+            "ExPLoRe was presented",
+            "at ECCV 2026 in Malmo!",
           ],
         },
       },

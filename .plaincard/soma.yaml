@@ -1,0 +1,10 @@
+kind: card
+name: soma
+line: "An open-source, science-driven health platform that turns your wearable data into plans you can act on."
+accent: green
+diagram:
+  - watch: {label: data}
+  - arrow
+  - chart: {label: insight}
+  - dots
+  - phone: {label: plan}

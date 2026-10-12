@@ -1,12 +1,13 @@
 [
   {
     "id": 1,
-    "title": "ExPLoRe: Exploration-driven Pre-training for Long-range Remote Sensing",
+    "title": "ExPLoRe: Expert Patch-Level Loss Routing for Multi-Objective Masked Image Modeling",
     "citations": 0,
     "year": 2026,
-    "conference": "ECCV 2026 (Under Review)",
-    "abstract": "ExPLoRe presents an exploration-driven pre-training strategy designed to capture long-range spatial dependencies in remote sensing imagery. The approach leverages structured exploration of multi-scale spatial contexts during self-supervised pre-training, improving performance on downstream segmentation and detection tasks.",
-    "link": ""
+    "conference": "ECCV 2026",
+    "abstract": "ExPLoRe repurposes Soft Mixture of Experts (MoE) dispatch weights as learned, per-patch loss coefficients for multi-objective masked image modeling. Loss-coupling lets gradients flow through dispatch weights to the router, enabling content-dependent specialization where different patches receive different emphases across training objectives. ViT-Base with a CLIP-B/16 teacher reaches 80.6% linear probe and 85.3% finetuning accuracy on ImageNet-1K.",
+    "link": "https://doi.org/10.1007/978-3-032-37314-4_16",
+    "code": "https://github.com/aicip/ExPLoRe"
   },
   {
     "id": 2,

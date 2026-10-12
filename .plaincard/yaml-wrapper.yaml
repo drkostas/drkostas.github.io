@@ -1,0 +1,8 @@
+kind: card
+name: YAML Wrapper
+line: "Reads a YAML configuration file and gives your program its values."
+accent: teal
+diagram:
+  - doc: {label: yaml}
+  - arrow: read
+  - box: {text: config, accent: true}

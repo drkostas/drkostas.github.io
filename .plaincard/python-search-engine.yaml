@@ -1,0 +1,10 @@
+kind: card
+name: Search Engine
+line: A search engine over the Gutenberg book archive, with ranked results.
+accent: violet
+diagram:
+  - box: {text: query}
+  - arrow:
+  - db: {label: books}
+  - arrow: rank
+  - doc: {label: results, accent: true}

@@ -1,0 +1,8 @@
+kind: card
+name: hevy2garmin
+line: "Sync Hevy gym workouts to Garmin Connect with exercise names, sets, reps, weights and heart rate."
+accent: blue
+diagram:
+  - phone: {label: Hevy}
+  - arrow: sync
+  - watch: {accent: true, label: Garmin}

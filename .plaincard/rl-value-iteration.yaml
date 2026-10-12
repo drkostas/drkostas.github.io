@@ -1,0 +1,10 @@
+kind: card
+name: Value Iteration
+line: Computes an optimal policy for a Markov decision process by value iteration.
+accent: violet
+diagram:
+  - box: {text: MDP}
+  - arrow: values
+  - box: {text: iterate}
+  - arrow
+  - check: {label: policy, accent: true}

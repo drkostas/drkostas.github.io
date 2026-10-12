@@ -1,0 +1,8 @@
+kind: card
+name: iphone2android
+line: "Move from an iPhone to an Android phone: messages, contacts, photos, apps and the home screen."
+accent: violet
+diagram:
+  - phone: {model: ios}
+  - arrow: adb
+  - phone: {model: android, accent: true}

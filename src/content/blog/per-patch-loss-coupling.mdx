@@ -10,7 +10,7 @@ draft: false
 
 ## Start with the picture
 
-ExPLoRe is a method we published at ECCV 2026, with Maofeng Tang and my advisor Hairong Qi. It addresses a specific problem in masked image modeling. When a model pretrains with several losses at once, existing methods weight those losses with one global number each, and ExPLoRe replaces the global numbers with a separate learned weight for every image patch, reused from the routing weights that a Soft-MoE already computes. The full details live in the [paper](https://arxiv.org/abs/2606.31201) and the [code](https://github.com/aicip/ExPLoRe), and this post walks through the idea, the ablations behind it, and the open questions in plainer language.
+ExPLoRe is a method we published at [ECCV 2026](https://doi.org/10.1007/978-3-032-37314-4_16), with Maofeng Tang and my advisor Hairong Qi. It addresses a specific problem in masked image modeling. When a model pretrains with several losses at once, existing methods weight those losses with one global number each, and ExPLoRe replaces the global numbers with a separate learned weight for every image patch, reused from the routing weights that a Soft-MoE already computes. The full details live in the [paper](https://arxiv.org/abs/2606.31201) and the [code](https://github.com/aicip/ExPLoRe), and this post walks through the idea, the ablations behind it, and the open questions in plainer language.
 
 ![Dispatch weights from a 2-expert ExPLoRe model overlaid on input images of dogs and birds. One expert concentrates weight on foreground faces and bodies while the other spreads weight across background and context.](/blog/per-patch-loss-coupling/expert-dispatch.png)
 

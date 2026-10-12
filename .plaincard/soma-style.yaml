@@ -1,0 +1,8 @@
+kind: card
+name: soma-style
+line: "Shared design tokens so the soma apps all use the same colours and chart palette."
+accent: blue
+diagram:
+  - box: {text: tokens, accent: true}
+  - arrow: share
+  - panes: {rows: 1, cols: 3}

@@ -42,8 +42,8 @@ export const ITEM_DEFINITIONS: Record<string, ItemDef> = {
     name: "ExPLoRe",
     pocket: "papers",
     description:
-      "Exploration-driven pre-training\nfor long-range remote sensing.\nECCV 2026 (under review).",
-    url: "https://scholar.google.com/citations?user=b___QQ8AAAAJ",
+      "Per-patch loss routing through\nSoft-MoE dispatch weights.\nECCV 2026.",
+    url: "https://doi.org/10.1007/978-3-032-37314-4_16",
     icon: "/game/ui/bag/oran_berry.png",
   },
   "paper_medic": {

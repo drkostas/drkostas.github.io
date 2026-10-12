@@ -1,0 +1,8 @@
+kind: card
+name: claude-ops
+line: "Tools for running many Claude Code chats on one machine, and reaching any of them by name."
+accent: clay
+diagram:
+  - user
+  - arrow
+  - panes: {rows: 2, cols: 3, highlight: [1, 0]}

@@ -1,0 +1,10 @@
+kind: card
+name: FleetSmart.ai
+line: A decision engine that tells shipowners which vessel to send where and when to reposition.
+accent: amber
+diagram:
+  - chart: {label: demand}
+  - arrow:
+  - box: {text: engine, accent: true}
+  - arrow: orders
+  - box: {text: fleet}

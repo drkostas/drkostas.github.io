@@ -1,0 +1,8 @@
+kind: card
+name: claude-human
+line: "Screen capture, lock-screen typing and phone notifications for a Mac a person and an agent share."
+accent: blue
+diagram:
+  - laptop: {shows: lock}
+  - dots
+  - phone: {shows: check}

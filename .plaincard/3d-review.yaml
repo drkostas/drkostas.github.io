@@ -1,0 +1,10 @@
+kind: card
+name: 3d-review
+line: "Review a 3D design with an assistant: mark what is wrong on the model, and get pictures back."
+accent: teal
+diagram:
+  - user: {label: you}
+  - arrow: mark
+  - cube: {accent: true, label: model}
+  - dots
+  - terminal: {label: assistant}
