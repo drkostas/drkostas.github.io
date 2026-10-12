@@ -1,0 +1,8 @@
+kind: card
+name: poke-starters
+line: "Finds the best Pokemon starter trio you could actually catch near a town."
+accent: clay
+diagram:
+  - box: {text: town}
+  - arrow: nearby
+  - panes: {rows: 1, cols: 3, accent: true}

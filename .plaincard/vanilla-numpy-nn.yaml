@@ -1,0 +1,10 @@
+kind: card
+name: Numpy NN
+line: A feed-forward neural network written from scratch in NumPy.
+accent: green
+diagram:
+  - box: {text: input}
+  - arrow
+  - box: {text: network, accent: true}
+  - arrow
+  - chart: {label: output}

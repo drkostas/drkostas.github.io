@@ -1,0 +1,10 @@
+kind: card
+name: TuneCraft
+line: "Builds Spotify playlists of fresh tracks that match your taste."
+accent: rose
+diagram:
+  - user: {label: your taste}
+  - arrow
+  - note: {accent: true, label: fresh tracks}
+  - arrow
+  - box: {text: playlist}

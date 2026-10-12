@@ -1,0 +1,8 @@
+kind: card
+name: banister
+line: "The Banister fitness and fatigue model in TypeScript, fitted to your training and turned into a VDOT."
+accent: sky
+diagram:
+  - watch: {label: training}
+  - arrow: fit
+  - chart: {label: form}

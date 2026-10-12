@@ -1,0 +1,10 @@
+kind: card
+name: 3D Segmentation
+line: "Labels each region of a 3D medical scan using transformer models."
+accent: violet
+diagram:
+  - cube: {label: 3D scan}
+  - arrow
+  - box: {text: transformer, accent: true}
+  - arrow
+  - check: {label: segmented}

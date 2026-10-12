@@ -1,0 +1,10 @@
+kind: card
+name: Accident Severity
+line: Predicts how severe a car accident is from its attributes.
+accent: blue
+diagram:
+  - box: {text: crash data}
+  - arrow
+  - box: {text: model}
+  - arrow
+  - chart: {label: severity, accent: true}

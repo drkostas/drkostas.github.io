@@ -1,0 +1,10 @@
+kind: card
+name: XpensAI
+line: Scans receipts and sorts expenses automatically with OCR and an assistant.
+accent: green
+diagram:
+  - doc: {label: receipt}
+  - arrow: scan
+  - box: {text: sort}
+  - line
+  - folder: {label: expenses, accent: true}

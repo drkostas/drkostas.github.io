@@ -1,0 +1,10 @@
+kind: card
+name: High SQL
+line: A small high-level wrapper over MySQL commands.
+accent: clay
+diagram:
+  - box: {text: your code}
+  - arrow:
+  - gate: {accent: true}
+  - line
+  - db: {label: mysql}

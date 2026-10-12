@@ -1,0 +1,8 @@
+kind: card
+name: QM Quiz
+line: "An Android quiz app about quantum mechanics."
+accent: teal
+diagram:
+  - doc: {label: questions}
+  - arrow
+  - phone: {model: android, shows: check, accent: true}

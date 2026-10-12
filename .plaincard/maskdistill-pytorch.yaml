@@ -1,0 +1,10 @@
+kind: card
+name: MaskDistill
+line: "An open rebuild of MaskDistill: a student model learns from a masked teacher, and the trained weights are released."
+accent: blue
+diagram:
+  - box: {text: masked teacher}
+  - arrow: distill
+  - box: {text: student model, accent: true}
+  - arrow
+  - doc: {label: weights}

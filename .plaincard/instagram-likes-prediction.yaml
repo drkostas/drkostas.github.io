@@ -1,0 +1,10 @@
+kind: card
+name: Instagram Likes
+line: Predicts how many likes a photo will get on Instagram.
+accent: rose
+diagram:
+  - box: {text: photo}
+  - arrow
+  - box: {text: model}
+  - arrow
+  - heart: {label: likes, accent: true}

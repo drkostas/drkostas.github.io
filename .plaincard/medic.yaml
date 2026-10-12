@@ -1,0 +1,10 @@
+kind: card
+name: MEDiC
+line: "Compresses a large image-understanding model into a small one that keeps most of its skill."
+accent: violet
+diagram:
+  - server: {label: large model}
+  - arrow: distill
+  - box: {text: small model, accent: true}
+  - arrow
+  - check

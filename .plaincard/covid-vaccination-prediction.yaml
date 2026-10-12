@@ -1,0 +1,10 @@
+kind: card
+name: COVID Vaccinations
+line: Forecasts daily COVID-19 vaccinations worldwide as a time series.
+accent: teal
+diagram:
+  - globe: {label: worldwide}
+  - arrow
+  - box: {text: model}
+  - arrow
+  - chart: {label: forecast, accent: true}

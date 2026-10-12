@@ -1,0 +1,8 @@
+kind: card
+name: Cross The Floor
+line: "Shows politicians switching parties between elections as a flow diagram."
+accent: sky
+diagram:
+  - box: {text: old party}
+  - arrow: MPs switch
+  - box: {text: new party, accent: true}

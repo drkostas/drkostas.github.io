@@ -1,0 +1,8 @@
+kind: card
+name: run-dj
+line: "Picks the music tempo for a runner's live heart rate, and shuffles a session to fit it."
+accent: rose
+diagram:
+  - heart: {label: heart rate}
+  - arrow: bpm
+  - note: {accent: true, label: tempo}

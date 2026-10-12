@@ -1,0 +1,10 @@
+kind: card
+name: Hybrid Girvan-Newman
+line: Finds communities in large social networks, distributed on Spark.
+accent: sky
+diagram:
+  - box: {text: network}
+  - arrow
+  - server: {label: Spark}
+  - arrow
+  - box: {text: communities, accent: true}
