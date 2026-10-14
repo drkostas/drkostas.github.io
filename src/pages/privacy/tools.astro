@@ -27,21 +27,25 @@ const email = siteMetadata.email.replace("mailto:", "");
             only with my own Google account.
           </p>
           <p>
-            Each tool asks Google for the least access it needs. A tool that keeps files in Google
-            Drive asks only for the files it creates itself, so it cannot see or change any other
-            file in the account.
+            Each tool asks Google for the least access it needs. The backup tool asks only for the
+            files it creates itself, so it cannot see or change any other file in the account.
           </p>
           <p>
-            Nothing these tools read is sold, shared with anyone or used for anything else. Files
-            they put in Google Drive are encrypted on my computer before they are uploaded, and they
-            stay there until I delete them.
+            The sync tool keeps folders on my computer the same as their copies in my Google Drive,
+            the way a desktop sync app does. To do that it needs to read and change my Drive files,
+            so it asks for that access, and only for my own account.
+          </p>
+          <p>
+            Nothing these tools read is sold, shared with anyone or used for anything else. Backup
+            files are encrypted on my computer before they are uploaded. Everything stays in my
+            Google Drive until I delete it.
           </p>
           <p>This page is about those tools only, not about this website.</p>
           <p>
             If you have a question about it, please write to me at
             <a class="text-text-primary underline underline-offset-4" href={siteMetadata.email}>{email}</a>.
           </p>
-          <p class="text-sm">Last updated 14 October 2026.</p>
+          <p class="text-sm">Last updated 15 October 2026.</p>
         </div>
       </GridWrapper>
     </div>
