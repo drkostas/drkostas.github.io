@@ -1,0 +1,49 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import GridWrapper from "@/components/GridWrapper.astro";
+import { siteMetadata } from "@/data/siteMetadata";
+
+// The privacy page Google asks for before a personal tool that signs in with Google may leave
+// test mode. It covers those tools only, so it lives under /privacy and leaves /privacy itself
+// free for a policy about this website.
+const email = siteMetadata.email.replace("mailto:", "");
+---
+
+<Layout
+  title="Privacy for my personal tools | Kostas Georgiou"
+  description="How the small tools I build for myself use Google sign-in."
+>
+  <div class="relative mt-14">
+    <div class="space-y-8">
+      <GridWrapper>
+        <h1 class="mx-auto max-w-2xl text-balance text-center text-4xl font-medium leading-tight tracking-tighter text-text-primary md:text-5xl md:leading-[56px]">
+          Privacy for my personal tools
+        </h1>
+      </GridWrapper>
+      <GridWrapper>
+        <div class="mx-auto max-w-2xl space-y-5 leading-8 text-text-secondary">
+          <p>
+            Some small tools I build for myself sign in with Google. Only I use them, and they work
+            only with my own Google account.
+          </p>
+          <p>
+            Each tool asks Google for the least access it needs. A tool that keeps files in Google
+            Drive asks only for the files it creates itself, so it cannot see or change any other
+            file in the account.
+          </p>
+          <p>
+            Nothing these tools read is sold, shared with anyone or used for anything else. Files
+            they put in Google Drive are encrypted on my computer before they are uploaded, and they
+            stay there until I delete them.
+          </p>
+          <p>This page is about those tools only, not about this website.</p>
+          <p>
+            If you have a question about it, please write to me at
+            <a class="text-text-primary underline underline-offset-4" href={siteMetadata.email}>{email}</a>.
+          </p>
+          <p class="text-sm">Last updated 14 October 2026.</p>
+        </div>
+      </GridWrapper>
+    </div>
+  </div>
+</Layout>
