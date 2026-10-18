@@ -1,0 +1,10 @@
+kind: card
+name: weekpage
+line: "A printable weekly planner, filled in from your calendars and the wind forecast."
+accent: teal
+footer: github.com/drkostas/weekpage
+diagram:
+  - doc: {label: ics}
+  - cloud: {label: wind}
+  - arrow: gather
+  - doc: {label: week, accent: true}
