@@ -362,7 +362,9 @@ export async function getTotalCommentCount(): Promise<number> {
   if (!supabase) return 0;
   const { count, error } = await supabase
     .from("blog_comments")
-    .select("*", { count: "exact", head: true })
+    // Count a specific granted column, not "*": the anon role has column-level
+    // SELECT that omits ip_hash, so a "*" count would be denied.
+    .select("id", { count: "exact", head: true })
     .eq("hidden", false);
   if (error) {
     console.warn("[supabase] getTotalCommentCount:", error);
@@ -725,7 +727,9 @@ export async function getWallMessageCount(): Promise<number> {
   if (!supabase) return 0;
   const { count, error } = await supabase
     .from("wall_messages")
-    .select("*", { count: "exact", head: true })
+    // Count a specific granted column, not "*": the anon role has column-level
+    // SELECT that omits ip_hash, so a "*" count would be denied.
+    .select("id", { count: "exact", head: true })
     .eq("hidden", false);
   if (error) {
     console.warn("[supabase] getWallMessageCount:", error);
