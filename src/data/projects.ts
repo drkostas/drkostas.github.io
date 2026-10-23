@@ -211,6 +211,17 @@ export const projects: Project[] = [
 
   // ---- Tools (PyPI) ----
   {
+    slug: "weekpage",
+    name: "weekpage",
+    image: "/projects/cards/weekpage.png",
+    description:
+      "A printable weekly planner. One A4 sheet with seven day columns and hour rows, filled in from my calendars and the wind forecast and anything else I give it, with the rest left to write by hand. The page is drawn as HTML and printed to a vector PDF, so the lines stay sharp at any size.",
+    tags: ["Python", "CLI", "iCalendar", "Open-Meteo", "PDF"],
+    category: "Tools",
+    source_code: "https://github.com/drkostas/weekpage",
+    addedAt: new Date("2026-10-13T12:00:00"),
+  },
+  {
     slug: "plaincard",
     name: "plaincard",
     image: "/projects/cards/plaincard.png",
